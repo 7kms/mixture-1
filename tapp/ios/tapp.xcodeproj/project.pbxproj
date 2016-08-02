@@ -23,8 +23,18 @@
 		057D01571D4F596A00DF9A56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057D01551D4F596A00DF9A56 /* LaunchScreen.storyboard */; };
 		057D01621D4F596A00DF9A56 /* tappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 057D01611D4F596A00DF9A56 /* tappTests.m */; };
 		057D016D1D4F596A00DF9A56 /* tappUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 057D016C1D4F596A00DF9A56 /* tappUITests.m */; };
+		27D275EA47634623AEB866FC /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA9EB8F970BF4E21833FA603 /* MaterialIcons.ttf */; };
 		310193F9CBFC6241540558CF /* libPods-tappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 585F78616F38F9EDAFE2ED06 /* libPods-tappTests.a */; };
 		38EC0606F6BAA77C81FE28ED /* libPods-tappUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADE806ACD36CB7D9520DECC /* libPods-tappUITests.a */; };
+		52C9113A6EF046FD8FB3C0D2 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76A09D27C91842A88731C160 /* FontAwesome.ttf */; };
+		657DE5D16F624B94B0A18C67 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA0D215FA08249DD8323DEE5 /* Foundation.ttf */; };
+		6C0C3D2429F548DDAA271C74 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 948A6BA4436A47B1976AA587 /* EvilIcons.ttf */; };
+		7F1777C21A2842F29CCA3EDE /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7251DBBA44A29A60A5A90 /* Entypo.ttf */; };
+		9FA99EE7779942A384288181 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0C34745D18495CB352D7EA /* libRNVectorIcons.a */; };
+		B6194A4B10E64AFF8628C7A1 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C15359AF4F1C4A9DA8858FAE /* Zocial.ttf */; };
+		D0DDBDF1BDC446BDBA699EFD /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 124F50A374794945AA23CD76 /* Ionicons.ttf */; };
+		E4791F4D16514A8D95F7214C /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 258B470807494CC1B599D3BF /* Octicons.ttf */; };
+		EAE7F5FB1D510D00002658C3 /* ReactMyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F5FA1D510D00002658C3 /* ReactMyPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +51,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 057D01431D4F596A00DF9A56;
 			remoteInfo = tapp;
+		};
+		EAE7F5FF1D5112F3002658C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FE660F36C4849E4840139C0 /* RNVectorIcons.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5DBEB1501B18CEA900B34395;
+			remoteInfo = RNVectorIcons;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -76,14 +93,26 @@
 		057D016C1D4F596A00DF9A56 /* tappUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tappUITests.m; sourceTree = "<group>"; };
 		057D016E1D4F596A00DF9A56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		062241F8945F774B23928620 /* Pods-tappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tappUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tappUITests/Pods-tappUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0FC7251DBBA44A29A60A5A90 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		124F50A374794945AA23CD76 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		1FE660F36C4849E4840139C0 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNVectorIcons.xcodeproj; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; };
+		258B470807494CC1B599D3BF /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		285AC328D68694B51D8C3751 /* Pods-tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tapp/Pods-tapp.debug.xcconfig"; sourceTree = "<group>"; };
 		3ADE806ACD36CB7D9520DECC /* libPods-tappUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tappUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4542D63F544C1620EA99F3D7 /* Pods-tappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tappTests/Pods-tappTests.release.xcconfig"; sourceTree = "<group>"; };
 		585F78616F38F9EDAFE2ED06 /* libPods-tappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F6A52B735825B653A3AD308 /* Pods-tappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tappUITests/Pods-tappUITests.release.xcconfig"; sourceTree = "<group>"; };
+		76A09D27C91842A88731C160 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		8B6AD8A334A96BE651F82687 /* Pods-tapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-tapp/Pods-tapp.release.xcconfig"; sourceTree = "<group>"; };
+		948A6BA4436A47B1976AA587 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		9D0C34745D18495CB352D7EA /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		C15359AF4F1C4A9DA8858FAE /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		D451A98DEAB52B8FCA6ACD0E /* Pods-tappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tappTests/Pods-tappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DA9EB8F970BF4E21833FA603 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		DBD654661D2255C7374AC7FB /* libPods-tapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0D215FA08249DD8323DEE5 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		EAE7F5F91D510D00002658C3 /* ReactMyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactMyPageViewController.h; sourceTree = "<group>"; };
+		EAE7F5FA1D510D00002658C3 /* ReactMyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactMyPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0341634E1DFF5CACCC34424D /* libPods-tapp.a in Frameworks */,
+				9FA99EE7779942A384288181 /* libRNVectorIcons.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,8 +147,8 @@
 		054DB33F1D4F73D3001CD210 /* RectViews */ = {
 			isa = PBXGroup;
 			children = (
-				055B78CD1D50C64C004D10D1 /* MIXReactViewController.h */,
-				055B78CE1D50C64C004D10D1 /* MIXReactViewController.m */,
+				EAE7F5F91D510D00002658C3 /* ReactMyPageViewController.h */,
+				EAE7F5FA1D510D00002658C3 /* ReactMyPageViewController.m */,
 			);
 			name = RectViews;
 			sourceTree = "<group>";
@@ -126,6 +156,8 @@
 		055B78CC1D50BF18004D10D1 /* tabbar */ = {
 			isa = PBXGroup;
 			children = (
+				055B78CD1D50C64C004D10D1 /* MIXReactViewController.h */,
+				055B78CE1D50C64C004D10D1 /* MIXReactViewController.m */,
 				055B78D01D50C85A004D10D1 /* MIXTabbarViewController.h */,
 				055B78D11D50C85A004D10D1 /* MIXTabbarViewController.m */,
 				055B78D31D50CA93004D10D1 /* MIXOCViewController.h */,
@@ -165,6 +197,8 @@
 				057D01451D4F596A00DF9A56 /* Products */,
 				911C18E659EBB992071C5E78 /* Pods */,
 				E5C7F455AA888EDB0388F212 /* Frameworks */,
+				58144092F13B4E118D7A9D9F /* Libraries */,
+				4B2DF7099EA64B1986760A56 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,6 +258,29 @@
 			path = tappUITests;
 			sourceTree = "<group>";
 		};
+		4B2DF7099EA64B1986760A56 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FC7251DBBA44A29A60A5A90 /* Entypo.ttf */,
+				948A6BA4436A47B1976AA587 /* EvilIcons.ttf */,
+				76A09D27C91842A88731C160 /* FontAwesome.ttf */,
+				EA0D215FA08249DD8323DEE5 /* Foundation.ttf */,
+				124F50A374794945AA23CD76 /* Ionicons.ttf */,
+				DA9EB8F970BF4E21833FA603 /* MaterialIcons.ttf */,
+				258B470807494CC1B599D3BF /* Octicons.ttf */,
+				C15359AF4F1C4A9DA8858FAE /* Zocial.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		58144092F13B4E118D7A9D9F /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1FE660F36C4849E4840139C0 /* RNVectorIcons.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		911C18E659EBB992071C5E78 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +302,14 @@
 				3ADE806ACD36CB7D9520DECC /* libPods-tappUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EAE7F5FC1D5112F3002658C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAE7F6001D5112F3002658C3 /* libRNVectorIcons.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +383,7 @@
 		057D013C1D4F596A00DF9A56 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 730;
 				ORGANIZATIONNAME = "魔方";
 				TargetAttributes = {
 					057D01431D4F596A00DF9A56 = {
@@ -345,6 +410,12 @@
 			mainGroup = 057D013B1D4F596A00DF9A56;
 			productRefGroup = 057D01451D4F596A00DF9A56 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EAE7F5FC1D5112F3002658C3 /* Products */;
+					ProjectRef = 1FE660F36C4849E4840139C0 /* RNVectorIcons.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				057D01431D4F596A00DF9A56 /* tapp */,
@@ -354,6 +425,16 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		EAE7F6001D5112F3002658C3 /* libRNVectorIcons.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNVectorIcons.a;
+			remoteRef = EAE7F5FF1D5112F3002658C3 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		057D01421D4F596A00DF9A56 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -362,6 +443,14 @@
 				057D01571D4F596A00DF9A56 /* LaunchScreen.storyboard in Resources */,
 				057D01541D4F596A00DF9A56 /* Assets.xcassets in Resources */,
 				057D01521D4F596A00DF9A56 /* Main.storyboard in Resources */,
+				7F1777C21A2842F29CCA3EDE /* Entypo.ttf in Resources */,
+				6C0C3D2429F548DDAA271C74 /* EvilIcons.ttf in Resources */,
+				52C9113A6EF046FD8FB3C0D2 /* FontAwesome.ttf in Resources */,
+				657DE5D16F624B94B0A18C67 /* Foundation.ttf in Resources */,
+				D0DDBDF1BDC446BDBA699EFD /* Ionicons.ttf in Resources */,
+				27D275EA47634623AEB866FC /* MaterialIcons.ttf in Resources */,
+				E4791F4D16514A8D95F7214C /* Octicons.ttf in Resources */,
+				B6194A4B10E64AFF8628C7A1 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +621,7 @@
 				055B78CF1D50C64C004D10D1 /* MIXReactViewController.m in Sources */,
 				055B78DB1D50CD87004D10D1 /* MIXVueViewController.m in Sources */,
 				057D01491D4F596A00DF9A56 /* main.m in Sources */,
+				EAE7F5FB1D510D00002658C3 /* ReactMyPageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +765,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -687,6 +781,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = tapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -699,6 +797,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = tappTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tappTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tapp.app/tapp";
@@ -712,6 +814,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = tappTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tappTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tapp.app/tapp";
@@ -724,6 +830,10 @@
 			buildSettings = {
 				INFOPLIST_FILE = tappUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tappUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = tapp;
@@ -736,6 +846,10 @@
 			buildSettings = {
 				INFOPLIST_FILE = tappUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tappUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = tapp;

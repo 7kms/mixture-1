@@ -7,12 +7,7 @@
 //
 
 #import "MIXReactViewController.h"
-
-
-#import "RCTRootView.h"
-#import "RCTBundleURLProvider.h"
-
-
+#import "ReactMyPageViewController.h"
 
 @interface MIXReactViewController ()
 
@@ -22,24 +17,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
-    
-    //NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-    
-    // [[RCTBundleURLProvider sharedSettings] setDefaults];
-    // jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
-    
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                        moduleName:@"tapp"
-                                                 initialProperties:nil
-                                                     launchOptions:nil];
-    rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
-    
-    [self.view addSubview:rootView];
- 
-    
+    [self layOutView];
 }
-
+- (void)layOutView{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(50, 300, [[UIScreen mainScreen] bounds].size.width - 2*50, 50);
+    button.backgroundColor = [UIColor yellowColor];
+    [button setTitle:@"go react native" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    button.titleLabel.textColor = [UIColor whiteColor];
+    button.titleLabel.font = [UIFont systemFontOfSize:16];
+    button.layer.cornerRadius = 5;
+    [button addTarget:self action:@selector(goToReactNative) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+}
+- (void)goToReactNative{
+    ReactMyPageViewController *vc = [[ReactMyPageViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
