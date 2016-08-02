@@ -9,7 +9,6 @@
 #import "ViewController.h"
 
 
-
 @interface ViewController ()
 
 @end
@@ -18,12 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

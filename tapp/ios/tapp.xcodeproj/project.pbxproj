@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0341634E1DFF5CACCC34424D /* libPods-tapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD654661D2255C7374AC7FB /* libPods-tapp.a */; };
+		055B78CF1D50C64C004D10D1 /* MIXReactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055B78CE1D50C64C004D10D1 /* MIXReactViewController.m */; };
+		055B78D21D50C85A004D10D1 /* MIXTabbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055B78D11D50C85A004D10D1 /* MIXTabbarViewController.m */; };
+		055B78D51D50CA93004D10D1 /* MIXOCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055B78D41D50CA93004D10D1 /* MIXOCViewController.m */; };
+		055B78D81D50CABC004D10D1 /* MIXSFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055B78D71D50CABC004D10D1 /* MIXSFViewController.m */; };
+		055B78DB1D50CD87004D10D1 /* MIXVueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055B78DA1D50CD87004D10D1 /* MIXVueViewController.m */; };
+		055B78DF1D50CE60004D10D1 /* MainpageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055B78DE1D50CE60004D10D1 /* MainpageController.m */; };
+		055B78E31D50D341004D10D1 /* TabPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055B78E21D50D341004D10D1 /* TabPageViewController.m */; };
 		057D01491D4F596A00DF9A56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 057D01481D4F596A00DF9A56 /* main.m */; };
 		057D014C1D4F596A00DF9A56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 057D014B1D4F596A00DF9A56 /* AppDelegate.m */; };
 		057D014F1D4F596A00DF9A56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 057D014E1D4F596A00DF9A56 /* ViewController.m */; };
@@ -38,6 +45,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		055B78CD1D50C64C004D10D1 /* MIXReactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIXReactViewController.h; sourceTree = "<group>"; };
+		055B78CE1D50C64C004D10D1 /* MIXReactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIXReactViewController.m; sourceTree = "<group>"; };
+		055B78D01D50C85A004D10D1 /* MIXTabbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIXTabbarViewController.h; sourceTree = "<group>"; };
+		055B78D11D50C85A004D10D1 /* MIXTabbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIXTabbarViewController.m; sourceTree = "<group>"; };
+		055B78D31D50CA93004D10D1 /* MIXOCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIXOCViewController.h; sourceTree = "<group>"; };
+		055B78D41D50CA93004D10D1 /* MIXOCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIXOCViewController.m; sourceTree = "<group>"; };
+		055B78D61D50CABC004D10D1 /* MIXSFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIXSFViewController.h; sourceTree = "<group>"; };
+		055B78D71D50CABC004D10D1 /* MIXSFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIXSFViewController.m; sourceTree = "<group>"; };
+		055B78D91D50CD87004D10D1 /* MIXVueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIXVueViewController.h; sourceTree = "<group>"; };
+		055B78DA1D50CD87004D10D1 /* MIXVueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIXVueViewController.m; sourceTree = "<group>"; };
+		055B78DD1D50CE60004D10D1 /* MainpageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainpageController.h; sourceTree = "<group>"; };
+		055B78DE1D50CE60004D10D1 /* MainpageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainpageController.m; sourceTree = "<group>"; };
+		055B78E11D50D341004D10D1 /* TabPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabPageViewController.h; sourceTree = "<group>"; };
+		055B78E21D50D341004D10D1 /* TabPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabPageViewController.m; sourceTree = "<group>"; };
 		057D01441D4F596A00DF9A56 /* tapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		057D01481D4F596A00DF9A56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		057D014A1D4F596A00DF9A56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,8 +117,43 @@
 		054DB33F1D4F73D3001CD210 /* RectViews */ = {
 			isa = PBXGroup;
 			children = (
+				055B78CD1D50C64C004D10D1 /* MIXReactViewController.h */,
+				055B78CE1D50C64C004D10D1 /* MIXReactViewController.m */,
 			);
 			name = RectViews;
+			sourceTree = "<group>";
+		};
+		055B78CC1D50BF18004D10D1 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				055B78D01D50C85A004D10D1 /* MIXTabbarViewController.h */,
+				055B78D11D50C85A004D10D1 /* MIXTabbarViewController.m */,
+				055B78D31D50CA93004D10D1 /* MIXOCViewController.h */,
+				055B78D41D50CA93004D10D1 /* MIXOCViewController.m */,
+				055B78D61D50CABC004D10D1 /* MIXSFViewController.h */,
+				055B78D71D50CABC004D10D1 /* MIXSFViewController.m */,
+				055B78D91D50CD87004D10D1 /* MIXVueViewController.h */,
+				055B78DA1D50CD87004D10D1 /* MIXVueViewController.m */,
+			);
+			name = tabbar;
+			sourceTree = "<group>";
+		};
+		055B78DC1D50CDCF004D10D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				055B78DD1D50CE60004D10D1 /* MainpageController.h */,
+				055B78DE1D50CE60004D10D1 /* MainpageController.m */,
+				055B78E11D50D341004D10D1 /* TabPageViewController.h */,
+				055B78E21D50D341004D10D1 /* TabPageViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		055B78E01D50D2FF004D10D1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		057D013B1D4F596A00DF9A56 = {
@@ -125,6 +181,9 @@
 		057D01461D4F596A00DF9A56 /* tapp */ = {
 			isa = PBXGroup;
 			children = (
+				055B78E01D50D2FF004D10D1 /* Models */,
+				055B78DC1D50CDCF004D10D1 /* Controllers */,
+				055B78CC1D50BF18004D10D1 /* tabbar */,
 				054DB33F1D4F73D3001CD210 /* RectViews */,
 				057D014A1D4F596A00DF9A56 /* AppDelegate.h */,
 				057D014B1D4F596A00DF9A56 /* AppDelegate.m */,
@@ -463,8 +522,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055B78D81D50CABC004D10D1 /* MIXSFViewController.m in Sources */,
+				055B78D21D50C85A004D10D1 /* MIXTabbarViewController.m in Sources */,
+				055B78DF1D50CE60004D10D1 /* MainpageController.m in Sources */,
+				055B78D51D50CA93004D10D1 /* MIXOCViewController.m in Sources */,
 				057D014F1D4F596A00DF9A56 /* ViewController.m in Sources */,
+				055B78E31D50D341004D10D1 /* TabPageViewController.m in Sources */,
 				057D014C1D4F596A00DF9A56 /* AppDelegate.m in Sources */,
+				055B78CF1D50C64C004D10D1 /* MIXReactViewController.m in Sources */,
+				055B78DB1D50CD87004D10D1 /* MIXVueViewController.m in Sources */,
 				057D01491D4F596A00DF9A56 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

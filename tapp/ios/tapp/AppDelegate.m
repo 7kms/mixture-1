@@ -7,42 +7,48 @@
 //
 
 #import "AppDelegate.h"
-#import "RCTRootView.h"
-#import "RCTBundleURLProvider.h"
+#import "MIXTabbarViewController.h"
+#import "MIXOCViewController.h"
+#import "MIXSFViewController.h"
+#import "MIXReactViewController.h"
+#import "MIXVueViewController.h"
+
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
-    
-    NSURL *jsCodeLocation = [NSURL URLWithString:@"http://localhost:8081/index.ios.bundle?platform=ios"];
-    
-    //NSURL *jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-    
-   // [[RCTBundleURLProvider sharedSettings] setDefaults];
-   // jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
-    
-    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                        moduleName:@"tapp"
-                                                 initialProperties:nil
-                                                     launchOptions:launchOptions];
-    rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UIViewController *rootViewController = [UIViewController new];
-    rootViewController.view = rootView;
-    self.window.rootViewController = rootViewController;
-    [self.window makeKeyAndVisible];
-    // Do any additional setup after loading the view, typically from a nib.
-    
+   [self setGlobalStyle];
+    MIXTabbarViewController *tabbarController = [[MIXTabbarViewController alloc]init];
+    MIXOCViewController *ocViewController = [[MIXOCViewController alloc] initWithTitle:@"oc" andImageName:@"oc"];
+    MIXSFViewController *sfViewController = [[MIXSFViewController alloc]initWithTitle:@"sf" andImageName:@"swift"];
+     MIXReactViewController *reactViewController = [[MIXReactViewController alloc] initWithTitle:@"react" andImageName:@"react"];
+    MIXVueViewController *vueViewController = [[MIXVueViewController alloc]initWithTitle:@"oc" andImageName:@"vue"];
+    NSArray *tabArr = [NSArray arrayWithObjects:ocViewController,sfViewController,reactViewController,vueViewController, nil];
+    tabbarController.viewControllers = [self structureNav:tabArr];
+    UINavigationController *rootNavigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];
+    [rootNavigationController setNavigationBarHidden:YES];
+    _window.rootViewController = rootNavigationController;
+    [_window makeKeyAndVisible];
     return YES;
 }
-
+- (void)setGlobalStyle{
+    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    _window.backgroundColor = [UIColor whiteColor];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:23/255.0 green:180/255.0 blue:237/255.0 alpha:1]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+}
+- (NSMutableArray *)structureNav:(NSArray *)tabArr{
+    NSMutableArray *mutableArr = [NSMutableArray array];
+    [tabArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:obj];
+        [mutableArr addObject:navController];
+    }];
+    return mutableArr;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
