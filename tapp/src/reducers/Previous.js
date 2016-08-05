@@ -12,3 +12,11 @@ export function previousItems(state = previousInitItems,action={}){
         return state;
     }
 }
+export function previousEntrance(state=false,action={}){
+  switch (action.type) {
+    case types.PERVIOUS_ENTRANCE_BUTTON:
+        return action.status;
+    default:
+        return state;
+  }
+}
