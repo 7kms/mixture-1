@@ -16,10 +16,11 @@ class App extends Component{
           title:'主页'
         }}
         configureScene={(route,routeStack)=> {
+          console.log("routStack",routeStack);
           if(Util.OS === 'android'){
             return Navigator.SceneConfigs.FloatFromBottom;
           }else{
-            return Navigator.SceneConfigs.FloatFromRight;
+            return Navigator.SceneConfigs.PushFromRight;
           }
         }}
         renderScene={(route, navigator) => {

@@ -10,6 +10,7 @@ import actionCreaters from '../actions';
 import { connect } from 'react-redux';
 import MainPage from './mainPage';
 import Swiper from 'react-native-swiper';
+import {CustomButton,Header} from '../Components/public';
 import Util from '../utils/base';
 const styles = StyleSheet.create({
   wrapper: {
@@ -73,19 +74,28 @@ class Previous extends Component{
     navigator: React.PropTypes.object,
     dispatch:React.PropTypes.func.isRequired
   };
+  generateHeader(){
+    const customHeader = null;
+    const leftButton = (<CustomButton text='NAVITE' onPress={()=>this._backToNative()}/>);
+    customHeader = (<Header title="REACT" leftButton={leftButton}>);
+    return customHeader;
+  }
+  _backToNative(){
+    console.log("back to native")
+  }
   _onMomentumnScrollEnd(e,state,context){
-    if(state.index == state.total - 1){
-      this.props.dispatch(actionCreaters.showPreviousEntrance(true));
-    }else{
-      this.props.dispatch(actionCreaters.showPreviousEntrance(false));
-    }
+    // if(state.index == (state.total - 1)){
+    //   this.props.dispatch(actionCreaters.showPreviousEntrance(true));
+    // }else{
+    //   this.props.dispatch(actionCreaters.showPreviousEntrance(false));
+    // }
   }
   _entranceApp(){
-    const {navigator} = this.props;
+    //const {navigator} = this.props;
     navigator.push({
       title:'我的主页',
       component:MainPage
-    });
+    })
   }
   _changeStyle(){
       const {previousTitleChange} = actionCreaters;
@@ -93,7 +103,9 @@ class Previous extends Component{
       dispatch(previousTitleChange(previousItems));
   }
   render() {
+    const navigatorHeader = this.generateHeader();
     return (
+      {navigatorHeader}
       <View style={{flex:1}}>
         <Swiper
           horizontal={false}
@@ -145,8 +157,8 @@ class Previous extends Component{
           })}
         </Swiper>
         {
-       this.props.showPreviousEntrance ? <TouchableHighlight style={styles.entrance} onPress={()=>this._entranceApp()}><Text style={styles.enterText}>ENTER</Text></TouchableHighlight> : null
-      }
+          this.props.showPreviousEntrance ? <TouchableHighlight style={styles.entrance} onPress={()=>this._entranceApp()}><Text style={styles.enterText}>ENTER</Text></TouchableHighlight> : null
+        }
       </View>
     )
   }
