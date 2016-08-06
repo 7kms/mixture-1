@@ -3,6 +3,9 @@
 .DS_Store
 #pods
 Pods
+# vscode
+.vscode
+
 # Xcode
 #
 build/

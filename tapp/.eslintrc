@@ -21,8 +21,9 @@
       "plugin:react/recommended"
     ],
     "globals":{
-      fetch : true,
-      alert: true
+      "alert": true,
+      "fetch" : true
+
     },
     "rules":{
         "no-console":0,
