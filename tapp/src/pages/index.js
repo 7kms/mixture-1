@@ -1,6 +1,6 @@
 'use strict';
 import React,{Component} from 'react';
-import {Navigator,StatusBar,StyleSheet} from 'react-native';
+import {Navigator,StatusBar,StyleSheet,Text} from 'react-native';
 import Util from '../utils/base';
 import Previous from './previous';
 class App extends Component{

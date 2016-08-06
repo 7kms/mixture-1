@@ -10,8 +10,9 @@ import actionCreaters from '../actions';
 import { connect } from 'react-redux';
 import MainPage from './mainPage';
 import Swiper from 'react-native-swiper';
-import {CustomButton,Header} from '../Components/public';
+import CustomComponents from '../Components/public';
 import Util from '../utils/base';
+const {CustomButton,Header} = CustomComponents;
 const styles = StyleSheet.create({
   wrapper: {
   },
@@ -75,23 +76,22 @@ class Previous extends Component{
     dispatch:React.PropTypes.func.isRequired
   };
   generateHeader(){
-    const customHeader = null;
     const leftButton = (<CustomButton text='NAVITE' onPress={()=>this._backToNative()}/>);
-    customHeader = (<Header title="REACT" leftButton={leftButton}>);
+    const customHeader = (<Header title="REACT" leftButton={leftButton}/>);
     return customHeader;
   }
   _backToNative(){
     console.log("back to native")
   }
   _onMomentumnScrollEnd(e,state,context){
-    // if(state.index == (state.total - 1)){
-    //   this.props.dispatch(actionCreaters.showPreviousEntrance(true));
-    // }else{
-    //   this.props.dispatch(actionCreaters.showPreviousEntrance(false));
-    // }
+    if(state.index == (state.total - 1)){
+      this.props.dispatch(actionCreaters.showPreviousEntrance(true));
+    }else{
+      this.props.dispatch(actionCreaters.showPreviousEntrance(false));
+    }
   }
   _entranceApp(){
-    //const {navigator} = this.props;
+    const {navigator} = this.props;
     navigator.push({
       title:'我的主页',
       component:MainPage
@@ -102,10 +102,11 @@ class Previous extends Component{
       const {dispatch,previousItems} = this.props;
       dispatch(previousTitleChange(previousItems));
   }
+  //<Header title="REACT" leftButton={(<CustomButton text='NAVITE' onPress={()=>this._backToNative()}/>)}/>
   render() {
-    const navigatorHeader = this.generateHeader();
     return (
-      {navigatorHeader}
+    <View style={{flex:1}}>
+      <CustomButton text='NAVITE' onPress={()=>this._backToNative()}/>
       <View style={{flex:1}}>
         <Swiper
           horizontal={false}
@@ -160,6 +161,7 @@ class Previous extends Component{
           this.props.showPreviousEntrance ? <TouchableHighlight style={styles.entrance} onPress={()=>this._entranceApp()}><Text style={styles.enterText}>ENTER</Text></TouchableHighlight> : null
         }
       </View>
+    </View>
     )
   }
 }

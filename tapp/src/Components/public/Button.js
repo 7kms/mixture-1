@@ -18,7 +18,10 @@ const styles = StyleSheet.create({
         backgroundColor:'yellow'
     }
 });
-class CustomButton extends Component{
+export class CustomButton extends Component{
+    constructor(props){
+        super(props);
+    }
     static propTypes = {
         onPress: React.PropTypes.func,
         text: React.PropTypes.string.isRequired
@@ -36,4 +39,3 @@ class CustomButton extends Component{
         );
     }
 }
-export default CustomButton;

@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         color:'white'
     }
 });
-class Header extends Component{
+export class Header extends Component{
     static propTypes = {
         title:React.PropTypes.string.isRequired,
         leftButton:React.PropTypes.object,
@@ -32,5 +32,3 @@ class Header extends Component{
         );   
     }
 }
-
-export default Header;
