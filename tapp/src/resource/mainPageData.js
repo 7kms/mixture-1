@@ -1,19 +1,20 @@
-[
+export const mainPageDataList = [
     {
-        title:'text',
-        icon:'logo-angular'
+        title:'<text>',
+        icon:'logo-angular',
+        componentName: 'text'
     },
     {
         title:'textInput',
-        icon:'logo-angular'
+        icon:'ios-paper-plane'
     },
     {
         title:'listView',
-        icon:'logo-angular'
+        icon:'ios-paw-outline'
     },
     {
         title:'text',
-        icon:'logo-angular'
+        icon:'ios-nuclear-outline'
     },
     {
         title:'text',
@@ -39,4 +40,4 @@
         title:'text',
         icon:'logo-angular'
     }
-]
+];

@@ -1,21 +1,16 @@
 import * as types from './actionTypes'
-
- 
-export function mainPageGetInfo(){
-   return (dispatch) => {
-        fetch('../resource/mainPageData')
-        .then((res=>res.json()))
-        .then(dataList=>{
-            dispatch({
-                type: types.MAIN_PAGE_GET_INFO,
-                dataList
-            });
-        })
-    }
-}
-export function mainPageFilterInfo(filter=''){
+export function mainPageFilterInfo(filter='',dataList){
+    let filterArr;
+    if(filter){
+        filter = filter.toUpperCase();
+        filterArr = dataList.filter(dataObj=>{
+            return dataObj.title.toUpperCase().indexOf(filter) > -1;
+        });
+    }else{
+        filterArr = dataList;
+    } 
     return {
         type:types.MAIN_PAGE_FILTER_INFO,
-        filter
+        dataList:filterArr
     }
 }
