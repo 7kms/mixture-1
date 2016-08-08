@@ -10,6 +10,8 @@ import {
 import Util from '../utils/base';
 import {connect} from 'react-redux';
 import {Header} from '../Components/public/Header';
+import {mainPageGetInfo} from '../actions/MainPageActions';
+let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 const styles = StyleSheet.create({
   searchRow:{
     height: 35,
@@ -47,7 +49,15 @@ class MainPage extends Component{
   static propTypes = {
     navigator: React.PropTypes.object,
     title: React.PropTypes.string,
+    dispatch: React.PropTypes.func,
+    MainPageListInfo: React.PropTypes.array.isRequired
   };
+  ComponentWillMount(){
+    const {dispatch,MainPageListInfo} = this.props;
+    if(MainPageListInfo.length < 1){
+      dispatch(mainPageGetInfo());
+    }
+  }
   _renderTextInput(): ?ReactElement<any> {
       return (
         <View style={styles.searchRow}>
@@ -67,9 +77,25 @@ class MainPage extends Component{
         </View>
       );
   }
-  _renderListView(){
+  _rendowRow(rowData){
+    console.log(rowData);
     return (
-      <ListView />
+      <View>
+        <Text>{rowData.title}</Text>
+      </View>
+    );
+  }
+  _renderListView(){
+    let {MainPageListInfo} = this.props;
+    if(MainPageListInfo.length < 1){
+      return null;
+    }
+    let dataSource = ds.cloneWithRows(MainPageListInfo);
+    return (
+      <ListView 
+        dataSource={dataSource}
+        renderRow={this._renderRow}
+      />
     );
   }
   render(){
@@ -82,8 +108,8 @@ class MainPage extends Component{
   }
 }
 export default connect(state=>{
-  const {mainInfo} = state;
+  const {MainPageListInfo} = state;
   return {
-    mainInfo
+    MainPageListInfo
   }
 })(MainPage);

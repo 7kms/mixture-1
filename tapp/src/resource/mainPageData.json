@@ -2,5 +2,41 @@
     {
         title:'text',
         icon:'logo-angular'
+    },
+    {
+        title:'textInput',
+        icon:'logo-angular'
+    },
+    {
+        title:'listView',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
     }
 ]
