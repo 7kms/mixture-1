@@ -13,7 +13,7 @@ class App extends Component{
         style={styles.container}
         initialRoute={{
           component: Previous,
-          title:'主页'
+          title:'REACT'
         }}
         configureScene={(route,routeStack)=> {
           console.log("routStack",routeStack);
@@ -23,9 +23,12 @@ class App extends Component{
             return Navigator.SceneConfigs.PushFromRight;
           }
         }}
+        onStartShouldSetResponder={()=>{
+          return false;
+        }}
         renderScene={(route, navigator) => {
           let Component = route.component;
-          return <Component navigator={navigator}/>
+          return <Component navigator={navigator} title={route.title}/>
         }}
         />
     );

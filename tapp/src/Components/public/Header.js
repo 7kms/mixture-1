@@ -4,14 +4,24 @@ import {
     Text,
     StyleSheet
 } from 'react-native';
+import {CustomButton} from './Button'
 import Util from '../../utils/base'
 const styles = StyleSheet.create({
     navigatorHeader:{
-        height:64,
-        backgroundColor:Util.backgroundColor
+        height:Util.size.navHeight,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        alignItems:'flex-end',
+        backgroundColor:Util.themeColor
+    },
+    titleContent:{
+        flex:1,
+        height:44,
+        justifyContent:'center',
+        alignItems:'center',
     },
     title:{
-        fontSize:16,
+        fontSize:18,
         color:'white'
     }
 });
@@ -25,9 +35,11 @@ export class Header extends Component{
         const {leftButton,rightButton,title} = this.props;
         return (
             <View style={styles.navigatorHeader}>
-                {leftButton ? leftButton : null}
-                <Text style={styles.title}>title</Text>
-                {rightButton ? rightButton : null}
+                {leftButton ? leftButton : <CustomButton />}
+                <View style={styles.titleContent}>
+                    <Text style={styles.title}>{this.props.title}</Text>
+                </View>
+                {rightButton ? rightButton : <CustomButton />}
             </View>
         );   
     }

@@ -6,16 +6,19 @@ import {
 } from 'react-native'
 const styles = StyleSheet.create({
     button:{
-        paddingVertical:15,
-        paddingHorizontal:15,
-        backgroundColor:'red',
-        
+        flexDirection:'row',
+        justifyContent:'center',
+        alignItems:'center',
+        width:80,
+        height:44
     },
     buttonText:{
         color:'white',
-        fontSize:16,
-        textAlign:'center',
-        backgroundColor:'yellow'
+        fontSize:14,
+        textAlign:'center'
+    },
+    iconText:{
+        marginLeft:5
     }
 });
 export class CustomButton extends Component{
@@ -24,7 +27,8 @@ export class CustomButton extends Component{
     }
     static propTypes = {
         onPress: React.PropTypes.func,
-        text: React.PropTypes.string.isRequired
+        icon: React.PropTypes.element,
+        text: React.PropTypes.string
     };
     render(){
         return(
@@ -32,7 +36,11 @@ export class CustomButton extends Component{
                 style={styles.button}
                 onPress = {()=>{this.props.onPress ? this.props.onPress(): null}}
             >
-                <Text style={styles.buttonText}>
+                {this.props.icon ? this.props.icon : null}
+                <Text 
+                    numberOfLines={1}
+                    style={this.props.icon ? [styles.buttonText,styles.iconText] : styles.buttonText}
+                    >
                     {this.props.text}
                 </Text>
             </TouchableOpacity>

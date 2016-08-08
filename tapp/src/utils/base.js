@@ -8,7 +8,8 @@ const Util = {
   themeColor:'#53cac3',
   size: {
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height
+    height: Dimensions.get('window').height,
+    navHeight:64
   }
 };
 export default Util;

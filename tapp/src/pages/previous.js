@@ -12,6 +12,8 @@ import MainPage from './mainPage';
 import Swiper from 'react-native-swiper';
 import CustomComponents from '../Components/public';
 import Util from '../utils/base';
+import Icon from 'react-native-vector-icons/Ionicons';
+
 const {CustomButton,Header} = CustomComponents;
 const styles = StyleSheet.create({
   wrapper: {
@@ -54,7 +56,7 @@ const styles = StyleSheet.create({
     textAlign:'center',
   }
 })
-const renderPagination = (index, total, context) => {
+const renderPagination = (index,total,context) => {
   return (
     <View style={{position:'absolute',right:10,bottom:10}}>
       <Text style={{fontSize:18,color:'#fff'}}>
@@ -73,11 +75,12 @@ class Previous extends Component{
     previousItems:React.PropTypes.array.isRequired,
     showPreviousEntrance: React.PropTypes.bool,
     navigator: React.PropTypes.object,
-    dispatch:React.PropTypes.func.isRequired
+    dispatch:React.PropTypes.func.isRequired,
+    title:React.PropTypes.string
   };
   generateHeader(){
-    const leftButton = (<CustomButton text='NAVITE' onPress={()=>this._backToNative()}/>);
-    const customHeader = (<Header title="REACT" leftButton={leftButton}/>);
+    const leftButton = (<CustomButton text='NAVITE' icon={<Icon name="ios-arrow-back" size={20} color="#fff"/>} onPress={()=>this._backToNative()}/>);
+    const customHeader = (<Header title={this.props.title} leftButton={leftButton}/>);
     return customHeader;
   }
   _backToNative(){
@@ -102,11 +105,11 @@ class Previous extends Component{
       const {dispatch,previousItems} = this.props;
       dispatch(previousTitleChange(previousItems));
   }
-  //<Header title="REACT" leftButton={(<CustomButton text='NAVITE' onPress={()=>this._backToNative()}/>)}/>
   render() {
+    let customNav = this.generateHeader();
     return (
     <View style={{flex:1}}>
-      <CustomButton text='NAVITE' onPress={()=>this._backToNative()}/>
+      {customNav}
       <View style={{flex:1}}>
         <Swiper
           horizontal={false}
@@ -141,7 +144,7 @@ class Previous extends Component{
           </View>
         </Swiper>
         <Swiper
-          height={Util.size.height - 150}
+          height={Util.size.height - Util.size.navHeight- 150}
           paginationStyle={{backgroundColor:'green'}}
           loop={false}
           renderPagination = {renderPagination}
