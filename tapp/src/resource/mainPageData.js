@@ -5,8 +5,9 @@ export const mainPageDataList = [
         componentName: 'text'
     },
     {
-        title:'textInput',
-        icon:'ios-paper-plane'
+        title:'<textInput>',
+        icon:'ios-paper-plane',
+        componentName:'textInput'
     },
     {
         title:'listView',
