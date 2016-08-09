@@ -21,8 +21,9 @@ export const ComponentsList = [
         componentName:'view'
     },
     {
-        title:'text',
-        icon:'logo-angular'
+        title:'<animate>',
+        icon:'ios-paw-outline',
+        componentName:'animate'
     },
     {
         title:'text',

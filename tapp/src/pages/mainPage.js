@@ -158,7 +158,6 @@ class MainPage extends Component{
     );
   }
   _renderListView(){
-    console.log("renderlist view");
     let dataObj = isFilter ? this.props.MainPageFilterObj : MainPageListObj;
     let { ComponentsList,ApisList } = dataObj;
     let dataSource = ds.cloneWithRowsAndSections({

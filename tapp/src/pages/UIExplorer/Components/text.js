@@ -1,24 +1,11 @@
 import React,{Component} from 'react';
 import {
     Image,
-  StyleSheet,
-  ScrollView,
   Text,
   View,
 } from 'react-native';
-import {LayoutHeader} from '../layout';
-const styles = StyleSheet.create({
-    title:{
-        backgroundColor:'#abcdef',
-        textAlign:'center',
-        paddingVertical:10,
-        color:'#777'
-    },
-    exampleContent:{
-        paddingHorizontal:10,
-        paddingVertical:10,
-    }
-});
+import  {layoutstyles,DeatilLayout} from '../detailLayout';
+
 let examples = [
     {
     title: 'Wrap',
@@ -428,20 +415,18 @@ class TextExplorer extends Component{
      };
     render(){
         return(
-            <View style={{flex:1,backgroundColor:'#fff'}}>
-                <LayoutHeader {...this.props}/>
-                <ScrollView>
-                    {examples.map((obj,index)=>{
-                        return (
+            <DeatilLayout {...this.props}>
+                {examples.map((obj,index)=>{
+                    return (
                         <View key={index} >
-                            <Text style={styles.title}> {obj.title}</Text>
-                            <View style={styles.exampleContent}>
+                            <Text style={layoutstyles.title}> {obj.title}</Text>
+                            <View style={layoutstyles.exampleContent}>
                                 {obj.render()}
                             </View>
-                        </View>);
-                    })}
-                </ScrollView>
-            </View>
+                        </View>
+                        );
+                })}
+            </DeatilLayout>
         );
     }
 }

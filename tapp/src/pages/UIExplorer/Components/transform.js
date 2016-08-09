@@ -2,11 +2,10 @@ import React,{Component} from 'react';
 import {
     Animated,
   StyleSheet,
-  ScrollView,
   Text,
   View,
 } from 'react-native';
-import {LayoutHeader} from '../layout';
+import  {layoutstyles,DeatilLayout} from '../detailLayout';
 import Util from '../../../utils/base'
 var styles = StyleSheet.create({
   container: {
@@ -183,18 +182,7 @@ class Flip extends Component {
     );
   }
 }
-const layoutStyle = StyleSheet.create({
-    title:{
-        backgroundColor:'#abcdef',
-        textAlign:'center',
-        paddingVertical:10,
-        color:'#777'
-    },
-    exampleContent:{
-        paddingHorizontal:10,
-        paddingVertical:10,
-    }
-});
+
 let examples = [
   {
     title: 'Perspective',
@@ -287,21 +275,18 @@ class TransformExplorer extends Component{
      };
     render(){
         return(
-            <View style={{flex:1,backgroundColor:'#fff'}}>
-                <LayoutHeader {...this.props}/>
-                <ScrollView>
-                    {examples.map((obj,index)=>{
-                        return (
+            <DeatilLayout {...this.props}>
+                {examples.map((obj,index)=>{
+                    return (
                         <View key={index} >
-                            <Text style={layoutStyle.title}> {obj.title}</Text>
-                            {obj.description ? (<Text>{obj.description}</Text>): null}
-                            <View style={layoutStyle.exampleContent}>
+                            <Text style={layoutstyles.title}> {obj.title}</Text>
+                            <View style={layoutstyles.exampleContent}>
                                 {obj.render()}
                             </View>
-                        </View>);
-                    })}
-                </ScrollView>
-            </View>
+                        </View>
+                        );
+                })}
+            </DeatilLayout>
         );
     }
 }

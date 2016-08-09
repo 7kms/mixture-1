@@ -1,25 +1,13 @@
 import React,{Component} from 'react';
 import {
-    Image,
   StyleSheet,
   ScrollView,
   Text,
   View,
   TouchableWithoutFeedback
 } from 'react-native';
-import {LayoutHeader} from '../layout';
-const layoutstyles = StyleSheet.create({
-    title:{
-        backgroundColor:'#abcdef',
-        textAlign:'center',
-        paddingVertical:10,
-        color:'#777'
-    },
-    exampleContent:{
-        paddingHorizontal:10,
-        paddingVertical:10,
-    }
-});
+import  {layoutstyles,DeatilLayout} from '../detailLayout';
+
 var styles = StyleSheet.create({
   box: {
     backgroundColor: '#527FE4',
@@ -156,20 +144,18 @@ class ViewExplorer extends Component{
      };
     render(){
         return(
-            <View style={{flex:1,backgroundColor:'#fff'}}>
-                <LayoutHeader {...this.props}/>
-                <ScrollView>
-                    {examples.map((obj,index)=>{
-                        return (
+            <DeatilLayout {...this.props}>
+                {examples.map((obj,index)=>{
+                    return (
                         <View key={index} >
                             <Text style={layoutstyles.title}> {obj.title}</Text>
                             <View style={layoutstyles.exampleContent}>
                                 {obj.render()}
                             </View>
-                        </View>);
-                    })}
-                </ScrollView>
-            </View>
+                        </View>
+                        );
+                })}
+            </DeatilLayout>
         );
     }
 }
