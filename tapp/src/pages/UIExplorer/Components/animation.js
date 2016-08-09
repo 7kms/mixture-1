@@ -7,8 +7,7 @@ import {
     Animate,
     ScrollView
 } from 'react-native';
-
-import  {layoutstyles,DeatilLayout} from '../detailLayout';
+import  {DetailSection,DeatilLayout} from '../detailLayout';
 
 let examples = [
   {
@@ -34,12 +33,7 @@ class AnimateExplorer extends Component{
             <DeatilLayout {...this.props}>
                 {examples.map((obj,index)=>{
                     return (
-                        <View key={index} >
-                            <Text style={layoutstyles.title}> {obj.title}</Text>
-                            <View style={layoutstyles.exampleContent}>
-                                {obj.render()}
-                            </View>
-                        </View>
+                        <DetailSection unique={index} {...obj}/>    
                         );
                 })}
             </DeatilLayout>

@@ -1,28 +1,46 @@
 import React,{Component} from 'react';
 import {
     View,
+    Text,
     StyleSheet,
     ScrollView
 } from 'react-native';
 import CustomComponent from '../../Components/public';
 import Icon from 'react-native-vector-icons/Ionicons';
+import Util from '../../utils/base'
 const styles = StyleSheet.create({
     icon:{
         marginLeft:10,
     }
 });
- const layoutstyles = StyleSheet.create({
+const sectionStyles = StyleSheet.create({
     title:{
-        backgroundColor:'#abcdef',
+        backgroundColor:'#fafafa',
         textAlign:'center',
         paddingVertical:10,
-        color:'#777'
+        color:'#777',
+        shadowColor:'#000',
+        shadowOffset:{width:2,height:1},
+        shadowRadius:2,
+        shadowOpacity:.1
     },
     exampleContent:{
         paddingHorizontal:10,
         paddingVertical:10,
+    },
+    sectionWrap:{
+        margin:10,
+        overflow:'hidden',
+        backgroundColor:'#fff',
+        borderWidth:Util.pixel,
+        borderRadius:5,
+        borderColor:'#ccc',
+        shadowColor:'#000',
+        shadowOffset:{width:1,height:1},
+        shadowRadius:2,
+        shadowOpacity:.1
     }
-});
+ });
 class LayoutHeader extends Component{
      static propTypes = {
          title: React.PropTypes.string,
@@ -54,4 +72,18 @@ class DeatilLayout extends Component{
         );
     }
 }
-export {layoutstyles,DeatilLayout}
+class DetailSection extends Component{
+    render(){
+        return (
+            <View 
+             style={sectionStyles.sectionWrap}>
+            <Text style={sectionStyles.title}> {this.props.title}</Text>
+            <View style={sectionStyles.exampleContent}>
+                {this.props.render()}
+            </View>
+        </View>
+        )
+         
+    }
+}
+export {DeatilLayout,DetailSection}

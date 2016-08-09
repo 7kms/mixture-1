@@ -5,7 +5,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import  {layoutstyles,DeatilLayout} from '../detailLayout';
+import  {DetailSection,DeatilLayout} from '../detailLayout';
 import Util from '../../../utils/base'
 var styles = StyleSheet.create({
   container: {
@@ -278,12 +278,7 @@ class TransformExplorer extends Component{
             <DeatilLayout {...this.props}>
                 {examples.map((obj,index)=>{
                     return (
-                        <View key={index} >
-                            <Text style={layoutstyles.title}> {obj.title}</Text>
-                            <View style={layoutstyles.exampleContent}>
-                                {obj.render()}
-                            </View>
-                        </View>
+                      <DetailSection key={index} {...obj}/>    
                         );
                 })}
             </DeatilLayout>

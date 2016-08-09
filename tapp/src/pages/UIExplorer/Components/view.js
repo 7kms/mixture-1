@@ -1,12 +1,11 @@
 import React,{Component} from 'react';
 import {
   StyleSheet,
-  ScrollView,
   Text,
   View,
   TouchableWithoutFeedback
 } from 'react-native';
-import  {layoutstyles,DeatilLayout} from '../detailLayout';
+import  {DetailSection,DeatilLayout} from '../detailLayout';
 
 var styles = StyleSheet.create({
   box: {
@@ -147,12 +146,7 @@ class ViewExplorer extends Component{
             <DeatilLayout {...this.props}>
                 {examples.map((obj,index)=>{
                     return (
-                        <View key={index} >
-                            <Text style={layoutstyles.title}> {obj.title}</Text>
-                            <View style={layoutstyles.exampleContent}>
-                                {obj.render()}
-                            </View>
-                        </View>
+                      <DetailSection key={index} {...obj}/>    
                         );
                 })}
             </DeatilLayout>
