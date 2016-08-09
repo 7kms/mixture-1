@@ -1,9 +1,9 @@
 import * as types from '../actions/actionTypes'
 
-export function MainPageFilterInfo(state = [],action={}){
+export function MainPageFilterObj(state = {},action={}){
     switch(action.type){
         case types.MAIN_PAGE_FILTER_INFO:
-            return action.dataList;
+            return action.dataObj;
         default:
             return state;    
     }

@@ -6,7 +6,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import {LayoutHeader} from './layout';
+import {LayoutHeader} from '../layout';
 const layoutStyle = StyleSheet.create({
     title:{
         backgroundColor:'#abcdef',

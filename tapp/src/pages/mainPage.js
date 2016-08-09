@@ -13,10 +13,12 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import {connect} from 'react-redux';
 import {Header} from '../Components/public/Header';
 import {mainPageFilterInfo} from '../actions/MainPageActions';
-import {mainPageDataList} from '../resource/mainPageData';
+import * as MainPageListObj from '../resource/mainPageData';
 import UIExplorer from './UIExplorer';
-console.log(UIExplorer);
-let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+let ds = new ListView.DataSource({
+  rowHasChanged: (r1, r2) => r1 !== r2,
+  sectionHeaderHasChanged:(h1,h2) => h1!==h2
+});
 let isFilter = false;
 const styles = StyleSheet.create({
   searchRow:{
@@ -77,6 +79,13 @@ const styles = StyleSheet.create({
     borderRadius:5,
     paddingHorizontal:10,
     paddingVertical:10,
+  },
+  sectionTitle:{
+    padding:10,
+    textAlign:'center',
+    backgroundColor: Util.themeColor,
+    color:'white',
+    fontWeight:'bold'
   }
 });
 class MainPage extends Component{
@@ -87,7 +96,7 @@ class MainPage extends Component{
     navigator: React.PropTypes.object,
     title: React.PropTypes.string,
     dispatch: React.PropTypes.func,
-    MainPageFilterInfo: React.PropTypes.array.isRequired
+    MainPageFilterObj: React.PropTypes.object
   };
   _filterData(filter){
     if(filter){
@@ -95,7 +104,7 @@ class MainPage extends Component{
     }else{
       isFilter = false
     }
-    this.props.dispatch(mainPageFilterInfo(filter,mainPageDataList));
+    this.props.dispatch(mainPageFilterInfo(filter,MainPageListObj));
   }
   _goDetail(rowData){
     console.log(rowData.componentName);
@@ -129,6 +138,11 @@ class MainPage extends Component{
         </View>
       );
   }
+  _renderSection(sectionData,sectionId){
+    return(
+      <Text style={styles.sectionTitle}>{sectionId}</Text>
+    );
+  }
   _renderRow(rowData){
     return (
       <TouchableHighlight  
@@ -144,21 +158,22 @@ class MainPage extends Component{
     );
   }
   _renderListView(){
-    let dataArr;
-    if(isFilter){
-      dataArr = this.props.MainPageFilterInfo;
-    }else{
-      dataArr =  this.props.MainPageFilterInfo.length > 0 ? this.props.MainPageFilterInfo : mainPageDataList; 
-    }
-    let dataSource = ds.cloneWithRows(dataArr);
-    let listView =  dataArr.length >0 ? (
-      <ListView 
+    console.log("renderlist view");
+    let dataObj = isFilter ? this.props.MainPageFilterObj : MainPageListObj;
+    let { ComponentsList,ApisList } = dataObj;
+    let dataSource = ds.cloneWithRowsAndSections({
+      Components: ComponentsList,
+      Apis: ApisList
+    });
+    let total = ComponentsList.length + ApisList.length;
+    let listView = total >0 ? (
+      <ListView
         style={{flex:1}}
         enableEmptySections = {true}
-        renderHeader = {(data)=> (<Text>{data}</Text>)}
         contentContainerStyle={styles.listContent}
         dataSource={dataSource}
         renderRow={this._renderRow.bind(this)}
+        renderSectionHeader={this._renderSection.bind(this)}
       />
       ):(
         <View style={styles.emptyContent}>
@@ -179,9 +194,9 @@ class MainPage extends Component{
     )
   }
 }
-export default connect(state=>{
-  const {MainPageFilterInfo} = state;
+export default connect(state =>{
+  const {MainPageFilterObj} = state;
   return {
-    MainPageFilterInfo
+    MainPageFilterObj
   }
 })(MainPage);

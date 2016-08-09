@@ -6,7 +6,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import {LayoutHeader} from './layout';
+import {LayoutHeader} from '../layout';
 const styles = StyleSheet.create({
     title:{
         backgroundColor:'#abcdef',
@@ -382,7 +382,7 @@ let examples = [
         <View>
             <Text>
             This text contains an inline blue view <View style={{width: 25, height: 25, backgroundColor: 'steelblue'}} /> and
-            an inline image <Image source={require('./img/flux.png')} style={{width: 30, height: 11, resizeMode: 'cover'}}/>. Neat, huh?
+            an inline image <Image source={require('../img/flux.png')} style={{width: 30, height: 11, resizeMode: 'cover'}}/>. Neat, huh?
             </Text>
         </View>
         );

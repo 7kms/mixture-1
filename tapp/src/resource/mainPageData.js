@@ -1,4 +1,5 @@
-export const mainPageDataList = [
+/* 两个列表:分别是Components 和 apis */
+export const ComponentsList = [
     {
         title:'<text>',
         icon:'logo-angular',
@@ -10,12 +11,60 @@ export const mainPageDataList = [
         componentName:'textInput'
     },
     {
-        title:'listView',
-        icon:'ios-paw-outline'
+        title:'<transfrom>',
+        icon:'ios-paw-outline',
+        componentName:'transform'
+    },
+    {
+        title:'<view>',
+        icon:'ios-nuclear-outline',
+        componentName:'view'
     },
     {
         title:'text',
-        icon:'ios-nuclear-outline'
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    },
+    {
+        title:'text',
+        icon:'logo-angular'
+    }
+];
+export const ApisList = [
+    {
+        title:'<text>',
+        icon:'logo-angular',
+        componentName: 'text'
+    },
+    {
+        title:'<textInput>',
+        icon:'ios-paper-plane',
+        componentName:'textInput'
+    },
+    {
+        title:'<transfrom>',
+        icon:'ios-paw-outline',
+        componentName:'transform'
+    },
+    {
+        title:'<view>',
+        icon:'ios-nuclear-outline',
+        componentName:'view'
     },
     {
         title:'text',

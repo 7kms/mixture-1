@@ -1,16 +1,16 @@
 import * as types from './actionTypes'
-export function mainPageFilterInfo(filter='',dataList){
-    let filterArr;
+export function mainPageFilterInfo(filter='',dataObj){
+    let keyArray = Object.keys(dataObj);
     if(filter){
         filter = filter.toUpperCase();
-        filterArr = dataList.filter(dataObj=>{
-            return dataObj.title.toUpperCase().indexOf(filter) > -1;
+        keyArray.forEach((key,index)=>{
+            dataObj[key].filter(dataObj=>{
+                return dataObj.title.toUpperCase().indexOf(filter) > -1;
+            });
         });
-    }else{
-        filterArr = dataList;
-    } 
+    }
     return {
         type:types.MAIN_PAGE_FILTER_INFO,
-        dataList:filterArr
+        dataObj
     }
 }
