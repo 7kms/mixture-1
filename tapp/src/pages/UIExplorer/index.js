@@ -6,6 +6,11 @@ import * as Animate from './Components/animation'
 import * as Modal from './Components/modal'
 import * as StatusBar from './Components/statusBar'
 import * as Switch from './Components/switch'
+import * as LayoutEvents from './Components/layoutEvent'
+import * as ScrollView from './Components/scrollview'
+import * as ListView from './Components/listview'
+import * as ListGrid from './Components/listviewGrid'
+import * as ListPaging from './Components/listviewPaging'
 export default {
     ...Text,
     ...TextInput,
@@ -14,5 +19,10 @@ export default {
     ...Animate,
     ...Modal,
     ...StatusBar,
-    ...Switch
+    ...Switch,
+    ...LayoutEvents,
+    ...ScrollView,
+    ...ListView,
+    ...ListGrid,
+    ...ListPaging
 }

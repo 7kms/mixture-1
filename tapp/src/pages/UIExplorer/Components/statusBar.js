@@ -25,9 +25,6 @@ var styles = StyleSheet.create({
     fontWeight: 'bold',
   }
 });
-
-
-
 const colors = [
   '#ff0000',
   '#00ff00',

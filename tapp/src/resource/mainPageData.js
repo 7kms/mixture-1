@@ -41,13 +41,40 @@ export const ComponentsList = [
         componentName:'switch'
     },
     {
-        title:'text',
-        icon:'logo-angular'
+        title:'<layoutEvent>',
+        icon:'logo-angular',
+        componentName:'layoutEvent'
     },
     {
-        title:'text',
-        icon:'logo-angular'
-    }
+        title:'<scrollview>',
+        icon:'logo-angular',
+        componentName:'scrollview'
+    },
+    {
+        title:'<listview>',
+        icon:'logo-angular',
+        componentName:'listview'
+    },
+    {
+        title:'<listview-grid>',
+        icon:'logo-angular',
+        componentName:'listgrid'
+    },
+    {
+        title:'<listview-paging>',
+        icon:'logo-angular',
+        componentName:'listpaging'
+    },
+    {
+        title:'<scrollview>',
+        icon:'logo-angular',
+        componentName:'scrollview'
+    },
+    {
+        title:'<swiper-listview>',
+        icon:'logo-angular',
+        componentName:'swiperListview'
+    },
 ];
 export const ApisList = [
     {
