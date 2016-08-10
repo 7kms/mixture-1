@@ -20,9 +20,9 @@ const sectionStyles = StyleSheet.create({
         paddingVertical:10,
         color:'#777',
         shadowColor:'#000',
-        shadowOffset:{width:2,height:1},
-        shadowRadius:2,
-        shadowOpacity:.1
+        shadowOffset:{width:2,height:2},
+        shadowRadius:5,
+        shadowOpacity:.3
     },
     exampleContent:{
         paddingHorizontal:10,
@@ -30,15 +30,22 @@ const sectionStyles = StyleSheet.create({
     },
     sectionWrap:{
         margin:10,
-        overflow:'hidden',
+        //overflow:'hidden',
         backgroundColor:'#fff',
         borderWidth:Util.pixel,
         borderRadius:5,
         borderColor:'#ccc',
         shadowColor:'#000',
         shadowOffset:{width:1,height:1},
-        shadowRadius:2,
-        shadowOpacity:.1
+        shadowRadius:5,
+        shadowOpacity:.3
+    },
+    desc:{
+        marginTop:2,
+        padding:5,
+        color:'#abcdef',
+        borderBottomWidth: 1,
+        borderBottomColor: '#ccc'
     }
  });
 class LayoutHeader extends Component{
@@ -61,7 +68,6 @@ class LayoutHeader extends Component{
 }
 class DeatilLayout extends Component{
     render(){
-        console.log({...this.props})
         return (
             <View style={{flex:1}}>
                 <LayoutHeader {...this.props}/>
@@ -78,6 +84,7 @@ class DetailSection extends Component{
             <View 
              style={sectionStyles.sectionWrap}>
             <Text style={sectionStyles.title}> {this.props.title}</Text>
+            {this.props.description ? <Text style={sectionStyles.desc}>{this.props.description}</Text> : null}
             <View style={sectionStyles.exampleContent}>
                 {this.props.render()}
             </View>

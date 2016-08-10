@@ -26,16 +26,19 @@ export const ComponentsList = [
         componentName:'animate'
     },
     {
-        title:'text',
-        icon:'logo-angular'
+        title:'<modal>',
+        icon:'logo-angular',
+        componentName:'modal'
     },
     {
-        title:'text',
-        icon:'logo-angular'
+        title:'<StatusBar>',
+        icon:'logo-angular',
+        componentName:'statusbar'
     },
     {
-        title:'text',
-        icon:'logo-angular'
+        title:'<switch>',
+        icon:'logo-angular',
+        componentName:'switch'
     },
     {
         title:'text',
