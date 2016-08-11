@@ -80,7 +80,7 @@ class ListViewGridLayoutExample extends React.Component{
       // ListView wraps ScrollView and so takes on its properties.
       // With that in mind you can use the ScrollView's contentContainerStyle prop to style the items.
       <ListView
-        style={{height:400}}
+        style={[{height:400}]}
         contentContainerStyle={styles.list}
         dataSource={this.state.dataSource}
         //initialListSize={21}

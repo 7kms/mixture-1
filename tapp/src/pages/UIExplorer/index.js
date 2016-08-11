@@ -11,6 +11,10 @@ import * as ScrollView from './Components/scrollview'
 import * as ListView from './Components/listview'
 import * as ListGrid from './Components/listviewGrid'
 import * as ListPaging from './Components/listviewPaging'
+import * as SwiperListView from './Components/swiperListView'
+import * as Indicator from './Components/activityIndicator'
+import * as DatePickerIOS from './Components/DatePickerIOS'
+import * as Image from './Components/image'
 export default {
     ...Text,
     ...TextInput,
@@ -24,5 +28,9 @@ export default {
     ...ScrollView,
     ...ListView,
     ...ListGrid,
-    ...ListPaging
+    ...ListPaging,
+    ...SwiperListView,
+    ...Indicator,
+    ...DatePickerIOS,
+    ...Image
 }

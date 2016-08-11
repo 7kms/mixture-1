@@ -1,54 +1,19 @@
 /* 两个列表:分别是Components 和 apis */
 export const ComponentsList = [
     {
-        title:'<text>',
+        title:'<ActivityIndicator>',
         icon:'logo-angular',
-        componentName: 'text'
+        componentName:'activityIndicator'
     },
     {
-        title:'<textInput>',
-        icon:'ios-paper-plane',
-        componentName:'textInput'
-    },
-    {
-        title:'<transfrom>',
-        icon:'ios-paw-outline',
-        componentName:'transform'
-    },
-    {
-        title:'<view>',
-        icon:'ios-nuclear-outline',
-        componentName:'view'
-    },
-    {
-        title:'<animate>',
-        icon:'ios-paw-outline',
-        componentName:'animate'
-    },
-    {
-        title:'<modal>',
+        title:'<DatePickerIOS>',
         icon:'logo-angular',
-        componentName:'modal'
+        componentName:'DatePickerIOS'
     },
     {
-        title:'<StatusBar>',
+        title:'<Image>',
         icon:'logo-angular',
-        componentName:'statusbar'
-    },
-    {
-        title:'<switch>',
-        icon:'logo-angular',
-        componentName:'switch'
-    },
-    {
-        title:'<layoutEvent>',
-        icon:'logo-angular',
-        componentName:'layoutEvent'
-    },
-    {
-        title:'<scrollview>',
-        icon:'logo-angular',
-        componentName:'scrollview'
+        componentName:'Image'
     },
     {
         title:'<listview>',
@@ -66,17 +31,30 @@ export const ComponentsList = [
         componentName:'listpaging'
     },
     {
+        title:'<swiper-listview>',
+        icon:'ios-paper-plane',
+        componentName:'swiperListview'
+    },
+     {
+        title:'<modal>',
+        icon:'logo-angular',
+        componentName:'modal'
+    },
+    {
         title:'<scrollview>',
         icon:'logo-angular',
         componentName:'scrollview'
     },
-    {
-        title:'<swiper-listview>',
+     {
+        title:'<StatusBar>',
         icon:'logo-angular',
-        componentName:'swiperListview'
+        componentName:'statusbar'
     },
-];
-export const ApisList = [
+    {
+        title:'<switch>',
+        icon:'logo-angular',
+        componentName:'switch'
+    },
     {
         title:'<text>',
         icon:'logo-angular',
@@ -96,29 +74,17 @@ export const ApisList = [
         title:'<view>',
         icon:'ios-nuclear-outline',
         componentName:'view'
+    }, 
+];
+export const ApisList = [
+    {
+        title:'<animate>',
+        icon:'ios-paw-outline',
+        componentName:'animate'
     },
     {
-        title:'text',
-        icon:'logo-angular'
+        title:'<layoutEvent>',
+        icon:'logo-angular',
+        componentName:'layoutEvent'
     },
-    {
-        title:'text',
-        icon:'logo-angular'
-    },
-    {
-        title:'text',
-        icon:'logo-angular'
-    },
-    {
-        title:'text',
-        icon:'logo-angular'
-    },
-    {
-        title:'text',
-        icon:'logo-angular'
-    },
-    {
-        title:'text',
-        icon:'logo-angular'
-    }
 ];
