@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TabPageViewController : UIViewController
+-(void)hidesTabBar: (BOOL) hidden;
 -(instancetype)initWithTitle:(NSString *)title andImageName:(NSString *)imageName;
 @end

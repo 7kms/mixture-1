@@ -26,15 +26,18 @@
 		27D275EA47634623AEB866FC /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA9EB8F970BF4E21833FA603 /* MaterialIcons.ttf */; };
 		310193F9CBFC6241540558CF /* libPods-tappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 585F78616F38F9EDAFE2ED06 /* libPods-tappTests.a */; };
 		38EC0606F6BAA77C81FE28ED /* libPods-tappUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ADE806ACD36CB7D9520DECC /* libPods-tappUITests.a */; };
+		4C2E8694042E482EA821660C /* libRealmReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B14EF57256E34D7EBBD445E0 /* libRealmReact.a */; };
 		52C9113A6EF046FD8FB3C0D2 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76A09D27C91842A88731C160 /* FontAwesome.ttf */; };
 		657DE5D16F624B94B0A18C67 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EA0D215FA08249DD8323DEE5 /* Foundation.ttf */; };
 		6C0C3D2429F548DDAA271C74 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 948A6BA4436A47B1976AA587 /* EvilIcons.ttf */; };
 		7F1777C21A2842F29CCA3EDE /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0FC7251DBBA44A29A60A5A90 /* Entypo.ttf */; };
 		9FA99EE7779942A384288181 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D0C34745D18495CB352D7EA /* libRNVectorIcons.a */; };
 		B6194A4B10E64AFF8628C7A1 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C15359AF4F1C4A9DA8858FAE /* Zocial.ttf */; };
+		BACE54C1B5DD40B09D7C2812 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C2110120A344CA8EFDFE56 /* libc++.tbd */; };
 		D0DDBDF1BDC446BDBA699EFD /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 124F50A374794945AA23CD76 /* Ionicons.ttf */; };
 		E4791F4D16514A8D95F7214C /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 258B470807494CC1B599D3BF /* Octicons.ttf */; };
 		EAE7F5FB1D510D00002658C3 /* ReactMyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F5FA1D510D00002658C3 /* ReactMyPageViewController.m */; };
+		F853B80D36C4442F98152394 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E24E81DD925465CA5C12CE4 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 057D01431D4F596A00DF9A56;
 			remoteInfo = tapp;
+		};
+		EA7AC9961D6344EC009F5CC9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F43E24C88C7746CDB77A5AFA /* RealmReact.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F60690131CA2766F0003FB26;
+			remoteInfo = RealmReact;
 		};
 		EAE7F5FF1D5112F3002658C3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -99,6 +109,7 @@
 		258B470807494CC1B599D3BF /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		285AC328D68694B51D8C3751 /* Pods-tapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tapp/Pods-tapp.debug.xcconfig"; sourceTree = "<group>"; };
 		3ADE806ACD36CB7D9520DECC /* libPods-tappUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tappUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E24E81DD925465CA5C12CE4 /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		4542D63F544C1620EA99F3D7 /* Pods-tappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tappTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tappTests/Pods-tappTests.release.xcconfig"; sourceTree = "<group>"; };
 		585F78616F38F9EDAFE2ED06 /* libPods-tappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F6A52B735825B653A3AD308 /* Pods-tappUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tappUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tappUITests/Pods-tappUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,13 +117,16 @@
 		8B6AD8A334A96BE651F82687 /* Pods-tapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-tapp/Pods-tapp.release.xcconfig"; sourceTree = "<group>"; };
 		948A6BA4436A47B1976AA587 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		9D0C34745D18495CB352D7EA /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
+		B14EF57256E34D7EBBD445E0 /* libRealmReact.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRealmReact.a; sourceTree = "<group>"; };
 		C15359AF4F1C4A9DA8858FAE /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		C6C2110120A344CA8EFDFE56 /* libc++.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		D451A98DEAB52B8FCA6ACD0E /* Pods-tappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tappTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tappTests/Pods-tappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA9EB8F970BF4E21833FA603 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		DBD654661D2255C7374AC7FB /* libPods-tapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0D215FA08249DD8323DEE5 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		EAE7F5F91D510D00002658C3 /* ReactMyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactMyPageViewController.h; sourceTree = "<group>"; };
 		EAE7F5FA1D510D00002658C3 /* ReactMyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactMyPageViewController.m; sourceTree = "<group>"; };
+		F43E24C88C7746CDB77A5AFA /* RealmReact.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RealmReact.xcodeproj; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +136,9 @@
 			files = (
 				0341634E1DFF5CACCC34424D /* libPods-tapp.a in Frameworks */,
 				9FA99EE7779942A384288181 /* libRNVectorIcons.a in Frameworks */,
+				4C2E8694042E482EA821660C /* libRealmReact.a in Frameworks */,
+				BACE54C1B5DD40B09D7C2812 /* libc++.tbd in Frameworks */,
+				F853B80D36C4442F98152394 /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				1FE660F36C4849E4840139C0 /* RNVectorIcons.xcodeproj */,
+				F43E24C88C7746CDB77A5AFA /* RealmReact.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -300,8 +318,18 @@
 				DBD654661D2255C7374AC7FB /* libPods-tapp.a */,
 				585F78616F38F9EDAFE2ED06 /* libPods-tappTests.a */,
 				3ADE806ACD36CB7D9520DECC /* libPods-tappUITests.a */,
+				C6C2110120A344CA8EFDFE56 /* libc++.tbd */,
+				3E24E81DD925465CA5C12CE4 /* libz.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA7AC9931D6344EC009F5CC9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA7AC9971D6344EC009F5CC9 /* libRealmReact.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		EAE7F5FC1D5112F3002658C3 /* Products */ = {
@@ -413,6 +441,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = EA7AC9931D6344EC009F5CC9 /* Products */;
+					ProjectRef = F43E24C88C7746CDB77A5AFA /* RealmReact.xcodeproj */;
+				},
+				{
 					ProductGroup = EAE7F5FC1D5112F3002658C3 /* Products */;
 					ProjectRef = 1FE660F36C4849E4840139C0 /* RNVectorIcons.xcodeproj */;
 				},
@@ -427,6 +459,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		EA7AC9971D6344EC009F5CC9 /* libRealmReact.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRealmReact.a;
+			remoteRef = EA7AC9961D6344EC009F5CC9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		EAE7F6001D5112F3002658C3 /* libRNVectorIcons.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -771,6 +810,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -790,6 +830,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -806,6 +847,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tappTests;
@@ -824,6 +866,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tappTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -840,6 +883,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tappUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -855,6 +899,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mofanghr.tappUITests;

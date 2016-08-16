@@ -41,9 +41,49 @@ export const ComponentsList = [
         componentName:'modal'
     },
     {
+        title:'<navigatorIOS>',
+        icon:'logo-angular',
+        componentName:'NavigatorIOS'
+    },
+    {
+        title:'<picker>',
+        icon:'logo-angular',
+        componentName:'picker'
+    },
+    {
+        title:'<pickerIos>',
+        icon:'logo-angular',
+        componentName:'pickerIos'
+    },
+     {
+        title:'<progressView>',
+        icon:'logo-angular',
+        componentName:'progressView'
+    },
+    {
+        title:'<refreshControl>',
+        icon:'logo-angular',
+        componentName:'refreshControl'
+    },
+    {
         title:'<scrollview>',
         icon:'logo-angular',
         componentName:'scrollview'
+    },
+    {
+        title:'<segmentedControlIos>',
+        icon:'logo-angular',
+        componentName:'segmentedControlIos'
+    },
+    {
+        title:'<slider>',
+        icon:'logo-angular',
+        componentName:'slider'
+    },
+    {
+        title:'<SnapshotViewIOS>',
+        icon:'logo-angular',
+        componentName:'SnapshotViewIOS'
     },
      {
         title:'<StatusBar>',
@@ -56,6 +96,11 @@ export const ComponentsList = [
         componentName:'switch'
     },
     {
+        title:'<tabbarIOS>',
+        icon:'logo-angular',
+        componentName: 'tabbarIOS'
+    },
+    {
         title:'<text>',
         icon:'logo-angular',
         componentName: 'text'
@@ -66,6 +111,11 @@ export const ComponentsList = [
         componentName:'textInput'
     },
     {
+        title:'<TouchableExample>',
+        icon:'ios-paper-plane',
+        componentName:'touchable'
+    },
+    {
         title:'<transfrom>',
         icon:'ios-paw-outline',
         componentName:'transform'
@@ -74,6 +124,11 @@ export const ComponentsList = [
         title:'<view>',
         icon:'ios-nuclear-outline',
         componentName:'view'
+    }, 
+    {
+        title:'<webView>',
+        icon:'ios-nuclear-outline',
+        componentName:'webView'
     }, 
 ];
 export const ApisList = [
@@ -87,4 +142,9 @@ export const ApisList = [
         icon:'logo-angular',
         componentName:'layoutEvent'
     },
+    {
+        title:'<realm>',
+        icon:'logo-angular',
+        componentName:'realm'
+    }
 ];

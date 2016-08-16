@@ -5,6 +5,7 @@ import {
   Text,
   Image,
   TouchableHighlight,
+  NativeModules
 } from 'react-native';
 import actionCreaters from '../actions';
 import { connect } from 'react-redux';
@@ -84,7 +85,9 @@ class Previous extends Component{
     return customHeader;
   }
   _backToNative(){
-    console.log("back to native")
+    console.log("back to native");
+    let {ReactPage} = NativeModules;
+    ReactPage.addEvent('react native','Beijing China',Date.now());
   }
   _onMomentumnScrollEnd(e,state,context){
     if(state.index == (state.total - 1)){

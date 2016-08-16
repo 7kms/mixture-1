@@ -23,10 +23,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
    [self setGlobalStyle];
     MIXTabbarViewController *tabbarController = [[MIXTabbarViewController alloc]init];
+    
     MIXOCViewController *ocViewController = [[MIXOCViewController alloc] initWithTitle:@"oc" andImageName:@"oc"];
     MIXSFViewController *sfViewController = [[MIXSFViewController alloc]initWithTitle:@"sf" andImageName:@"swift"];
-     MIXReactViewController *reactViewController = [[MIXReactViewController alloc] initWithTitle:@"react" andImageName:@"react"];
+    MIXReactViewController *reactViewController = [[MIXReactViewController alloc] initWithTitle:@"react" andImageName:@"react"];
     MIXVueViewController *vueViewController = [[MIXVueViewController alloc]initWithTitle:@"oc" andImageName:@"vue"];
+    
     NSArray *tabArr = [NSArray arrayWithObjects:ocViewController,sfViewController,reactViewController,vueViewController, nil];
     tabbarController.viewControllers = [self structureNav:tabArr];
     UINavigationController *rootNavigationController = [[UINavigationController alloc] initWithRootViewController:tabbarController];

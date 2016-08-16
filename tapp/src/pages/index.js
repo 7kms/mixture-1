@@ -6,6 +6,8 @@ import Previous from './previous';
 class App extends Component{
   componentWillMount(){
     StatusBar.setBarStyle('light-content',true);
+    StatusBar.setNetworkActivityIndicatorVisible(true);
+    setTimeout(()=>StatusBar.setNetworkActivityIndicatorVisible(false),3000);
   }
   render(){
     return (
@@ -16,7 +18,7 @@ class App extends Component{
           title:'REACT'
         }}
         configureScene={(route,routeStack)=> {
-          console.log("routStack",routeStack);
+          //console.log("routStack",routeStack);
           if(Util.OS === 'android'){
             return Navigator.SceneConfigs.FloatFromBottom;
           }else{

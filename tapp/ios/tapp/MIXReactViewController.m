@@ -15,8 +15,13 @@
 
 @implementation MIXReactViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    //self.hidesBottomBarWhenPushed = YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addObserverToNotification];
     [self layOutView];
 }
 - (void)layOutView{
@@ -31,7 +36,21 @@
     [button addTarget:self action:@selector(goToReactNative) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
 }
+- (void)addObserverToNotification{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateSence:) name:@"RN" object:nil];
+}
+#pragma mark 切换场景
+- (void)updateSence:(NSNotification *)notification{
+    NSLog(@"%@",[NSThread currentThread]);
+    NSLog(@"%@",notification);
+    dispatch_queue_t mainqueue = dispatch_get_main_queue();
+    dispatch_async(mainqueue, ^{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    });
+    
+}
 - (void)goToReactNative{
+    [self hidesTabBar:YES];
     ReactMyPageViewController *vc = [[ReactMyPageViewController alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }

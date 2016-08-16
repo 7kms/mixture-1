@@ -15,6 +15,18 @@ import * as SwiperListView from './Components/swiperListView'
 import * as Indicator from './Components/activityIndicator'
 import * as DatePickerIOS from './Components/DatePickerIOS'
 import * as Image from './Components/image'
+import * as picker from './Components/picker'
+import * as pickerIos from './Components/pickerIos'
+import * as NavigatorIOS from './Components/navigatorIOS'
+import * as progressView from './Components/progressView'
+import * as refreshControl from './Components/refreshControl'
+import * as segmentedControlIos from './Components/segmentedControlIos'
+import * as slider from './Components/slider'
+import * as SnapshotViewIos from './Components/SnapshotViewIos'
+import * as tabbarIOS from './Components/tabbarIOS'
+import * as touchable from './Components/touchableExample'
+import * as webView from './Components/webView'
+import * as realm from './Apis/testRealm'
 export default {
     ...Text,
     ...TextInput,
@@ -32,5 +44,17 @@ export default {
     ...SwiperListView,
     ...Indicator,
     ...DatePickerIOS,
-    ...Image
+    ...Image,
+    ...picker,
+    ...pickerIos,
+    ...NavigatorIOS,
+    ...progressView,
+    ...refreshControl,
+    ...segmentedControlIos,
+    ...slider,
+    ...SnapshotViewIos,
+    ...tabbarIOS,
+    ...touchable,
+    ...webView,
+    ...realm
 }

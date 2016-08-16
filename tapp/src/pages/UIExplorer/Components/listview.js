@@ -40,13 +40,13 @@ var hashCode = function(str) {
 
 var styles = StyleSheet.create({
   gridContent:{
-    flexDirection:'row',
-    flexWrap:'wrap',
-    alignItems:'flex-start',
-    justifyContent:'space-around'
+    // flexDirection:'row',
+    // flexWrap:'wrap',
+    // alignItems:'flex-start',
+    // justifyContent:'space-around'
   },
   row: {
-    width:150,
+    //width:150,
     marginBottom:10,
     flexDirection: 'row',
     justifyContent: 'center',
@@ -85,7 +85,7 @@ class ListViewSimpleExample extends React.Component{
     return (
       <ListView
           style={{height:400}}
-          contentContainerStyle={styles.gridContent}
+          //contentContainerStyle={styles.gridContent}
           dataSource={this.state.dataSource}
           renderRow={this._renderRow.bind(this)}
           renderScrollComponent={props => {

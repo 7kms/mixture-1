@@ -86,7 +86,7 @@ class DetailSection extends Component{
             <Text style={sectionStyles.title}> {this.props.title}</Text>
             {this.props.description ? <Text style={sectionStyles.desc}>{this.props.description}</Text> : null}
             <View style={sectionStyles.exampleContent}>
-                {this.props.render()}
+                {this.props.render(this.props.navigator)}
             </View>
         </View>
         )
