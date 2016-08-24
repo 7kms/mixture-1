@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import {
     Navigator
 } from 'react-native';
-import Launch from './launch';
+import Launch from './Launch';
 import Util from '../Utils';
 console.log(Launch)
 class App extends Component{
@@ -11,6 +11,7 @@ class App extends Component{
     }
     render(){
         return(
+            //创建应用的根导航(路由)
             <Navigator
                 initialRoute={{
                     title:'launch',

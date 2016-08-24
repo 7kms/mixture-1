@@ -6,6 +6,7 @@ const Util = {
   ratio: PixelRatio.get(),
   pixel: 1 / PixelRatio.get(),
   themeColor:'#53cac3',
+  selectedColor: '#00beff',
   statusBarHeight: Platform.OS == 'ios' ? 20 : 25,
   size: {
     width: Dimensions.get('window').width,

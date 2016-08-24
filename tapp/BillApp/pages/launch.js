@@ -1,3 +1,6 @@
+/**
+ * 启动页面
+ */
 import React,{Component} from 'react';
 import {
     StyleSheet,
@@ -7,7 +10,7 @@ import {
     InteractionManager,
     Image
 } from 'react-native';
-import MainPage from './mainPage';
+import MainPage from './MainPage';
 import Util from '../Utils';
 const styles = StyleSheet.create({
     img:{
