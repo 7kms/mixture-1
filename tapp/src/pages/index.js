@@ -7,7 +7,10 @@ class App extends Component{
   componentWillMount(){
     StatusBar.setBarStyle('light-content',true);
     StatusBar.setNetworkActivityIndicatorVisible(true);
-    setTimeout(()=>StatusBar.setNetworkActivityIndicatorVisible(false),3000);
+    this.timer = setTimeout(()=>StatusBar.setNetworkActivityIndicatorVisible(false),3000);
+  }
+  componentWillUnmount(){
+    this.timer && clearTimeout(this.timer);
   }
   render(){
     return (

@@ -27,6 +27,7 @@ import * as tabbarIOS from './Components/tabbarIOS'
 import * as touchable from './Components/touchableExample'
 import * as webView from './Components/webView'
 import * as realm from './Apis/testRealm'
+import * as RealmModel from './Apis/testRealm2'
 export default {
     ...Text,
     ...TextInput,
@@ -56,5 +57,6 @@ export default {
     ...tabbarIOS,
     ...touchable,
     ...webView,
-    ...realm
+    ...realm,
+    ...RealmModel
 }

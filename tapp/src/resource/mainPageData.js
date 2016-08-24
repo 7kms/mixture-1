@@ -146,5 +146,11 @@ export const ApisList = [
         title:'<realm>',
         icon:'logo-angular',
         componentName:'realm'
-    }
+    },
+    {
+        title:'<RealmModel>',
+        icon:'logo-angular',
+        componentName:'RealmModel'
+    },
+    
 ];

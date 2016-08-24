@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		0341634E1DFF5CACCC34424D /* libPods-tapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD654661D2255C7374AC7FB /* libPods-tapp.a */; };
 		055B78CF1D50C64C004D10D1 /* MIXReactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 055B78CE1D50C64C004D10D1 /* MIXReactViewController.m */; };
@@ -36,6 +35,7 @@
 		BACE54C1B5DD40B09D7C2812 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C6C2110120A344CA8EFDFE56 /* libc++.tbd */; };
 		D0DDBDF1BDC446BDBA699EFD /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 124F50A374794945AA23CD76 /* Ionicons.ttf */; };
 		E4791F4D16514A8D95F7214C /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 258B470807494CC1B599D3BF /* Octicons.ttf */; };
+		EAAA46E11D63815D00FFDD0A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAA46E01D63815D00FFDD0A /* libsqlite3.0.tbd */; };
 		EAE7F5FB1D510D00002658C3 /* ReactMyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE7F5FA1D510D00002658C3 /* ReactMyPageViewController.m */; };
 		F853B80D36C4442F98152394 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E24E81DD925465CA5C12CE4 /* libz.tbd */; };
 /* End PBXBuildFile section */
@@ -124,6 +124,7 @@
 		DA9EB8F970BF4E21833FA603 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		DBD654661D2255C7374AC7FB /* libPods-tapp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tapp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0D215FA08249DD8323DEE5 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		EAAA46E01D63815D00FFDD0A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		EAE7F5F91D510D00002658C3 /* ReactMyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactMyPageViewController.h; sourceTree = "<group>"; };
 		EAE7F5FA1D510D00002658C3 /* ReactMyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactMyPageViewController.m; sourceTree = "<group>"; };
 		F43E24C88C7746CDB77A5AFA /* RealmReact.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RealmReact.xcodeproj; path = "../node_modules/realm/react-native/ios/RealmReact.xcodeproj"; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAAA46E11D63815D00FFDD0A /* libsqlite3.0.tbd in Frameworks */,
 				0341634E1DFF5CACCC34424D /* libPods-tapp.a in Frameworks */,
 				9FA99EE7779942A384288181 /* libRNVectorIcons.a in Frameworks */,
 				4C2E8694042E482EA821660C /* libRealmReact.a in Frameworks */,
@@ -315,6 +317,7 @@
 		E5C7F455AA888EDB0388F212 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAAA46E01D63815D00FFDD0A /* libsqlite3.0.tbd */,
 				DBD654661D2255C7374AC7FB /* libPods-tapp.a */,
 				585F78616F38F9EDAFE2ED06 /* libPods-tappTests.a */,
 				3ADE806ACD36CB7D9520DECC /* libPods-tappUITests.a */,
