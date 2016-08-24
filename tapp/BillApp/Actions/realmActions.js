@@ -19,3 +19,12 @@ export function getBillList(){
         billList: storeList[0]
     }
 }
+export function addBill(bill){
+    console.log(bill)
+    realm.write(()=>{
+        storeList[0].items.push(bill);
+    });
+    return (dispatch)=>{
+        dispatch(getBillList());
+    }
+}

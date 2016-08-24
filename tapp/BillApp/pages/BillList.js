@@ -2,37 +2,182 @@ import React,{Component} from 'react';
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    NativeModules,
+    ListView,
+    TouchableHighlight
 } from 'react-native';
- import actionCreates from '../Actions';
- import { connect } from 'react-redux';
+import actionCreates from '../Actions';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { connect } from 'react-redux';
+import { Header } from '../Components/public/Header';
+import { CustomButton } from '../Components/public/Button';
+import BillDetail from './BillDetail';
+import AddBill from './AddBill';
 import Utils from '../Utils';
+let ds = new ListView.DataSource({
+  rowHasChanged: (r1, r2) => r1 !== r2,
+  sectionHeaderHasChanged:(h1,h2) => h1!==h2
+});
 const styles = StyleSheet.create({
-    content:{
+  emptyContent:{
         flex:1,
-        color:'#fff',
         justifyContent:'center',
-        alignItems:'center',
-        backgroundColor:Utils.selectedColor
-    }
+        alignItems:'center'
+  },
+  emptyText:{
+    borderRadius:5,
+    paddingHorizontal:10,
+    paddingVertical:10,
+  },
+  sectionTitle:{
+    height:40,
+    paddingLeft:10,
+    justifyContent:'center',
+    backgroundColor: Utils.selectedColor,
+    
+  },
+  titleText:{
+      fontSize:18,
+      color:'white',
+  },
+  billRow:{
+      backgroundColor:'#fafafa',
+      marginBottom:10,
+  },
+  billInfo:{
+      flexDirection:'row',
+      borderBottomWidth:Utils.pixel,
+      borderBottomColor:Utils.selectedColor
+  },
+  billItem:{
+      flex:1,
+      height: 75,
+      justifyContent:'space-around',
+      alignItems:'center',
+  },
+  itemDfn:{
+      color:'#777'
+  },
+  billDesc:{
+      flexDirection:'row',
+      alignItems:'center',
+      paddingVertical:8
+  }
 });
 class BillList extends Component{
     constructor(props){
         super(props);
     }
+    _goBillDeatil(bill){
+        return false;
+        let {navigator} = this.props;
+        console.log(bill);
+        navigator.push({
+            title:'',
+            Component: BillDetail,
+            bill
+        });
+    }
+    _addBill(){
+        console.log('add bill');
+        let {navigator} = this.props;
+        navigator.push({
+            title:'',
+            Component: AddBill
+        });
+    }
+    _backToNative(){
+        console.log("back to native");
+        let {ReactPage} = NativeModules;
+        ReactPage.backToNative('react native','Beijing China',Date.now());
+    }
+    _renderRow(rowData, sectionID, rowID, highlightRow){
+        console.log("rendersection",rowData, sectionID, rowID, highlightRow);
+        return (
+            <TouchableHighlight
+                //activeOpacity={0.1}
+                onderlayColor="#abcdef"
+                onPress={()=>{
+                    this._goBillDeatil(rowData);
+                }}
+            >
+                <View style={styles.billRow}>
+                   <View style={styles.billInfo}>
+                        <View style={styles.billItem}>
+                            <Text style={styles.itemDfn}>金额</Text>
+                            <Text style={{color:'#ff9340'}}>{rowData.money}</Text>
+                        </View> 
+                        <View style={styles.billItem}>
+                            <Text style={styles.itemDfn}>分类</Text>
+                            <Text>{rowData.category}</Text>
+                        </View>
+                        <View style={styles.billItem}>
+                            <Text style={styles.itemDfn}>时间</Text>
+                            <Text>{rowData.time.getMonth() + '月' + rowData.time.getDate() + '日'}</Text>
+                        </View>
+                   </View>                   
+                    <View style={styles.billDesc}>
+                        <Text style={{flex:1,textAlign:'center',color:'#777'}}>描述</Text>
+                        <Text style={{flex:2,textAlign:'right',marginRight:10}} numberOfLines={1}>{rowData.description}</Text>
+                    </View>
+                </View>
+                                
+            </TouchableHighlight>
+            
+        );
+    }
+    _renderSection(sectionData, sectionID){
+       // console.log("rendersection",sectionData, sectionID);
+        return (
+           <View style={styles.sectionTitle}>
+             <Text style={styles.titleText}>{sectionID}</Text>
+           </View> 
+        );
+    }
+    _renderListView(){
+        let { billList } = this.props;
+        let dataSource, total;
+        if(billList.name){
+            dataSource = ds.cloneWithRowsAndSections({
+                [billList.name]: billList.items
+            }); 
+            total = billList.items.length;
+        }
+        let listView = total >0 ? (
+        <ListView
+            style={{flex:1}}
+            enableEmptySections = {true}
+            contentContainerStyle={styles.listContent}
+            dataSource={dataSource}
+            renderRow={this._renderRow.bind(this)}
+            renderSectionHeader={this._renderSection.bind(this)}
+        />
+        ):(
+            <View style={styles.emptyContent}>
+                <Icon name="ios-outlet-outline" size={200} color={Utils.themeColor}/>
+                <Text style={styles.emptyText}>什么都木有~</Text>
+                <Text style={styles.emptyText} onPress={()=>this._addBill()}>点击添加~</Text>
+            </View>
+        );
+        return listView;
+    }
+     _generateHeader(){
+        const leftButton = (<CustomButton text='NAVITE' leftIcon={<Icon name="ios-arrow-back" size={20} color="#fff"/>} onPress={()=>this._backToNative()}/>);
+        const rightButton = <CustomButton text='记一笔' rightIcon={<Icon name="ios-paper-plane" size={20} color="#fff"/>} onPress={()=>this._addBill()}/>;
+        const customHeader = (<Header title={this.props.title} leftButton={leftButton} rightButton={rightButton}/>);
+        return customHeader;
+    }
     componentWillMount(){
         let { dispatch } = this.props;
+        alert(1)
         dispatch(actionCreates.getBillList());
     }
     render (){
         return (
-            <View style={styles.content}>
-                <Text>
-                    bill list
-                </Text>
-                {
-                    this.props.billList ? (<Text>{this.props.billList.name}</Text>): null
-                }
+            <View style={{flex:1}}>
+                {this._generateHeader()}
+                {this._renderListView()}
             </View>
         );
     }

@@ -10,7 +10,8 @@ const Util = {
   statusBarHeight: Platform.OS == 'ios' ? 20 : 25,
   size: {
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height
+    height: Dimensions.get('window').height,
+    navHeight: Platform.OS == 'ios' ? 64 : 69
   }
 };
 export default Util;

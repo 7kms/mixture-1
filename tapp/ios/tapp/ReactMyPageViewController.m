@@ -24,7 +24,7 @@
 @implementation ReactMyPageViewController
 
 RCT_EXPORT_MODULE(ReactPage);
-RCT_EXPORT_METHOD(addEvent:(NSString *)name location:(NSString *)location date:(NSDate *)date){
+RCT_EXPORT_METHOD(backToNative:(NSString *)name location:(NSString *)location date:(NSDate *)date){
     //[self performSelectorOnMainThread:@selector(showView) withObject:location waitUntilDone:YES];
     //UIViewAnimationOptions option = UIViewAnimationOptionCurveEaseOut | UIViewAnimationTransitionFlipFromLeft;
     //[UIView transitionFromView:reactView toView:self.view duration:1.0 options:option completion:nil];

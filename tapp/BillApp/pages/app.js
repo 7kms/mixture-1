@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
 import {
-    Navigator
+    Navigator,
+    Text
 } from 'react-native';
 import Launch from './Launch';
 import Util from '../Utils';
-console.log(Launch)
 class App extends Component{
     constructor(props){
         super(props);
@@ -17,6 +17,7 @@ class App extends Component{
                     title:'launch',
                     Component:Launch
                 }}
+                
                 configureScene = {(route,routeStack)=>{
                     if(Util.OS === 'android'){
                         return Navigator.SceneConfigs.FloatFromBottom;
@@ -28,6 +29,7 @@ class App extends Component{
                     let {Component,title} = route;
                     return <Component navigator={navigator} title={title} {...route}/>
                 }}
+
             />
         );
     }

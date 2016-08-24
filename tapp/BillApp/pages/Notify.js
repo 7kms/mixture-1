@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         color:'#fff',
         justifyContent:'center',
         alignItems:'center',
-        backgroundColor:Utils.selectedColor
+        backgroundColor:Utils.themeColor
     }
 });
 class NotifyView extends Component{

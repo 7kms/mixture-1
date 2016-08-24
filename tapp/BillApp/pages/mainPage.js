@@ -23,13 +23,23 @@ const styles = StyleSheet.create({
 class MainPage extends Component{
     _changeTab(tag){
         let{dispatch} = this.props;
+        let Tabs = {
+            billList:{
+                selected:false,
+                badage:0
+            },
+            notify:{
+                selected:false,
+                badage:0
+            }
+        };
         let currentTab = {
             [tag]:{
                 selected:true,
                 badage:0
             }
         };
-        dispatch(actionCreaters.changeTab(currentTab));
+        dispatch(actionCreaters.changeTab({...Tabs,...currentTab}));
     }
     render(){
         let {tabStatus,navigator} = this.props;
@@ -42,7 +52,7 @@ class MainPage extends Component{
                     renderSelectedIcon={() => <Icon name="ios-list-box-outline" style={styles.itemIcon} size={20} color={Utils.themeColor}/>}
                     badgeText = {tabStatus.billList.badage}
                     onPress={() => this._changeTab('billList')}>
-                    <BillListView navigator={navigator}/>
+                    <BillListView navigator={navigator} title="账单列表"/>
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={tabStatus.notify.selected}
@@ -51,7 +61,7 @@ class MainPage extends Component{
                     renderSelectedIcon={() => <Icon name="ios-list-box-outline" style={styles.itemIcon} size={20} color={Utils.themeColor}/>}
                     renderBadge={() => tabStatus.notify.badage > 0 ?  <CustomBadgeView badage={tabStatus.notify.badage} /> : null}
                     onPress={() => this._changeTab('notify')}>
-                    <NotifyView navigator={navigator}/>
+                    <NotifyView navigator={navigator} title="通知"/>
                 </TabNavigator.Item>
             </TabNavigator>
         );
