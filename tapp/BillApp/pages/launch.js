@@ -45,11 +45,11 @@ class Launch extends Component{
         this.timer && clearInterval(this.timer);
         let { navigator } = this.props;
         InteractionManager.runAfterInteractions(() => {
-        navigator.resetTo({
-            title:'bill-list',
-            Component: MainPage
+            navigator.resetTo({
+                title:'bill-list',
+                Component: MainPage
+            });
         });
-      });
         
     }
     componentWillUnmount(){

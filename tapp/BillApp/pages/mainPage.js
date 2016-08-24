@@ -4,8 +4,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import actionCreaters from '../Actions';
-
-import CustomBadgeView from '../components/CustomBadge';
+import CustomBadgeView from '../Components/CustomBadge';
 import BillListView from './BillList';
 import NotifyView from './Notify';
 

@@ -2,11 +2,10 @@ import React,{Component} from 'react';
 import {
     View,
     Text,
-    StyleSheet,
-    ListView
+    StyleSheet
 } from 'react-native';
-import actionCreates from '../Actions';
-import { connect } from 'react-redux';
+ import actionCreates from '../Actions';
+ import { connect } from 'react-redux';
 import Utils from '../Utils';
 const styles = StyleSheet.create({
     content:{
@@ -18,6 +17,9 @@ const styles = StyleSheet.create({
     }
 });
 class BillList extends Component{
+    constructor(props){
+        super(props);
+    }
     componentWillMount(){
         let { dispatch } = this.props;
         dispatch(actionCreates.getBillList());
@@ -28,7 +30,9 @@ class BillList extends Component{
                 <Text>
                     bill list
                 </Text>
-                {this.props.billList ? (<Text>{this.props.billList.name}</Text>): null}
+                {
+                    this.props.billList ? (<Text>{this.props.billList.name}</Text>): null
+                }
             </View>
         );
     }

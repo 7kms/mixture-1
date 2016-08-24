@@ -10,12 +10,12 @@ export function getBillList(){
                     name:'默认账单',
                     items:[]
                 };
-                storeList = realm.create('BillList',list);
+                realm.create('BillList',list);
             });
         }
     }
     return {
-        type:types.ADD_BILL,
+        type: types.INITICAL_BILL_LIST,
         billList: storeList[0]
     }
 }

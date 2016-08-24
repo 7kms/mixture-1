@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     }
 });
 export default class CustomBadage extends Component{
-    consturctor(props){
+    constructor(props){
         super(props);
     }
     render(){

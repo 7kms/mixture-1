@@ -4,7 +4,6 @@ import {
     Text,
     StyleSheet
 } from 'react-native';
-import { connect } from 'react-redux';
 import Utils from '../Utils'
 const styles = StyleSheet.create({
     content:{
@@ -20,12 +19,10 @@ class NotifyView extends Component{
         return (
             <View style={styles.content}>
                 <Text>
-                    bill list
+                    notify list
                 </Text>
             </View>
         );
     }
 }
-export default connect(state=>{
-
-})(NotifyView);
+export default NotifyView;

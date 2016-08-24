@@ -1,6 +1,6 @@
 import Realm from 'realm';
-class Bill extends Realm.object {}
-Bill.schema = {
+//class Bill extends Realm.object {}
+const BillSchema = {
     name:'Bill',
     properties:{
         category : {type:'string'},
@@ -8,11 +8,11 @@ Bill.schema = {
         time : {type:'date'},
         money: {type:'double'}
     }
-}
+};
 
-class BillList extends Realm.object {}
+//class BillList extends Realm.object {}
 
-BillList.schema = {
+const BillListSchema = {
     name: 'BillList',
     properties: {
         name: 'string',
@@ -20,4 +20,4 @@ BillList.schema = {
     }
 }
 
-export default new Realm({schema:[ Bill, BillList ]});
+export default new Realm({schema:[ BillSchema, BillListSchema ]});
