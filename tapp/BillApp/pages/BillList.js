@@ -12,7 +12,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { connect } from 'react-redux';
 import { Header } from '../Components/public/Header';
 import { CustomButton } from '../Components/public/Button';
-import BillDetail from './BillDetail';
+import UpdateBillView from './UpdateBill';
 import AddBill from './AddBill';
 import Utils from '../Utils';
 let ds = new ListView.DataSource({
@@ -69,21 +69,21 @@ class BillList extends Component{
     constructor(props){
         super(props);
     }
-    _goBillDeatil(bill){
-        return false;
+    _goUpdateBill(bill,index){
         let {navigator} = this.props;
         console.log(bill);
         navigator.push({
-            title:'',
-            Component: BillDetail,
-            bill
+            title: '账单修改',
+            Component: UpdateBillView,
+            bill,
+            index
         });
     }
     _addBill(){
         console.log('add bill');
         let {navigator} = this.props;
         navigator.push({
-            title:'',
+            title:'添加账单',
             Component: AddBill
         });
     }
@@ -99,7 +99,7 @@ class BillList extends Component{
                 //activeOpacity={0.1}
                 onderlayColor="#abcdef"
                 onPress={()=>{
-                    this._goBillDeatil(rowData);
+                    this._goUpdateBill(rowData,rowID);
                 }}
             >
                 <View style={styles.billRow}>
@@ -110,16 +110,16 @@ class BillList extends Component{
                         </View> 
                         <View style={styles.billItem}>
                             <Text style={styles.itemDfn}>分类</Text>
-                            <Text>{rowData.category}</Text>
+                            <Text style={{color:'#777'}}>{rowData.category}</Text>
                         </View>
                         <View style={styles.billItem}>
                             <Text style={styles.itemDfn}>时间</Text>
-                            <Text>{rowData.time.getMonth() + '月' + rowData.time.getDate() + '日'}</Text>
+                            <Text style={{color:'#777'}}>{rowData.time.getMonth() + '月' + rowData.time.getDate() + '日'}</Text>
                         </View>
                    </View>                   
                     <View style={styles.billDesc}>
-                        <Text style={{flex:1,textAlign:'center',color:'#777'}}>描述</Text>
-                        <Text style={{flex:2,textAlign:'right',marginRight:10}} numberOfLines={1}>{rowData.description}</Text>
+                        <Text style={{flex:1,textAlign:'center',color:'#777'}}>备注</Text>
+                        <Text style={{flex:2,textAlign:'right',marginRight:10,color:'#777'}} numberOfLines={1}>{rowData.description}</Text>
                     </View>
                 </View>
                                 
@@ -170,7 +170,6 @@ class BillList extends Component{
     }
     componentWillMount(){
         let { dispatch } = this.props;
-        alert(1)
         dispatch(actionCreates.getBillList());
     }
     render (){

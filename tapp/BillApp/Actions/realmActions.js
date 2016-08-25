@@ -20,9 +20,24 @@ export function getBillList(){
     }
 }
 export function addBill(bill){
-    console.log(bill)
     realm.write(()=>{
         storeList[0].items.push(bill);
+    });
+    return (dispatch)=>{
+        dispatch(getBillList());
+    }
+}
+export function updateBill(index,bill){
+    realm.write(()=>{
+        storeList[0].items[index] = bill;
+    });
+    return (dispatch)=>{
+        dispatch(getBillList());
+    }
+}
+export function deleteBill(index){
+    realm.write(()=>{
+        storeList[0].items.splice(parseInt(index),1);
     });
     return (dispatch)=>{
         dispatch(getBillList());
