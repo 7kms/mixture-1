@@ -12,6 +12,7 @@
 #import "RCTBundleURLProvider.h"
 #import "RCTBridgeModule.h"
 #import "MIXReactViewController.h"
+#import "RCTEventDispatcher.h"
 
 
 @interface ReactMyPageViewController ()<RCTBridgeModule>{
@@ -23,21 +24,23 @@
 
 @implementation ReactMyPageViewController
 
+//导出一个模块名供javascript引用
+
 RCT_EXPORT_MODULE(ReactPage);
 RCT_EXPORT_METHOD(backToNative:(NSString *)name location:(NSString *)location date:(NSDate *)date){
-    //[self performSelectorOnMainThread:@selector(showView) withObject:location waitUntilDone:YES];
-    //UIViewAnimationOptions option = UIViewAnimationOptionCurveEaseOut | UIViewAnimationTransitionFlipFromLeft;
-    //[UIView transitionFromView:reactView toView:self.view duration:1.0 options:option completion:nil];
+//     [self performSelectorOnMainThread:@selector(showView) withObject:location waitUntilDone:YES];
+//     UIViewAnimationOptions option = UIViewAnimationOptionCurveEaseOut | UIViewAnimationTransitionFlipFromLeft;
+//     [UIView transitionFromView:reactView toView:self.view duration:1.0 options:option completion:nil];
 //    dispatch_queue_t mainQueue = dispatch_get_main_queue();
 //    dispatch_sync(mainQueue, ^{
 //        //NSLog(@"%@",[NSThread currentThread]);
-//        
+       
 //    });
 //    UIViewController *vc = [[MIXReactViewController alloc] init];
 //    dispatch_sync(dispatch_get_main_queue(), ^{
 //        [self presentViewController:vc animated:NO completion:nil];
 //    });
-   // [self presentViewController:vc animated:NO completion:nil];
+//    [self presentViewController:vc animated:NO completion:nil];
 //    NSDictionary *dictionary = @{@"name":name,@"location":location,@"date":date};
 //    [[NSNotificationCenter defaultCenter] postNotificationName:@"RN" object:self userInfo:dictionary];
 //    dispatch_async(dispatch_get_main_queue(), ^{
@@ -50,8 +53,48 @@ RCT_EXPORT_METHOD(backToNative:(NSString *)name location:(NSString *)location da
 //    });
     [self notifiaction];
 }
+
 - (void)notifiaction{
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RN" object:self userInfo:@{@"a":@"cc"}];
+}
+
+//对外提供调用方法,并执行callback
+RCT_EXPORT_METHOD(eventsCallback:(RCTResponseSenderBlock)callback){
+    NSArray *arr = @[@"oc",@"swift",@"react"];
+    callback(@[[NSNull null],events]);
+}
+//对外提供调用方法,支持Promise
+RCT_REMAP_METHOD(eventsPromise,
+                 resolver:(RCTPromiseResolveBlock)resolve
+                 rejecter:(RCTPromiseRejectBlock)reject)
+{
+  NSArray *arr = @[@"oc",@"swift",@"react",@"vue"];
+  if (arr) {
+    resolve(arr);
+  } else {
+    NSError *error=[NSError errorWithDomain:@"这是Promise回调错误信息..." code:101 userInfo:nil];
+    reject(@"no_events", @"There were no events", error);
+  }
+}
+//对外提供调用方法,另起一个子线程
+RCT_EXPORT_METHOD(doSomethingExpensive:(NSString *)param callback:(RCTResponseSenderBlock)callback)
+{
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    // 在后台执行耗时操作
+    // You can invoke callback from any thread/queue
+    callback(@[[NSNull null],@"耗时操作执行完成..."]);
+  });
+}
+//进行触发发送通知事件
+RCT_EXPORT_METHOD(sendNotification:(NSString *)name){
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jsCallingOc:) name:nil object:nil];
+}
+ 
+//进行设置发送事件通知给JavaScript端
+- (void)jsCallingOc:(NSNotification *)notification
+{
+  [self.bridge.eventDispatcher sendAppEventWithName:@"notifyEmiter"
+                                               body:@{@"name": @"react",@"name": @"swift"}];
 }
 
 - (void)viewDidLoad {
@@ -91,14 +134,5 @@ RCT_EXPORT_METHOD(backToNative:(NSString *)name location:(NSString *)location da
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

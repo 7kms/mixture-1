@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import {
-    Navigator,
-    Text
+    Navigator
 } from 'react-native';
 import Launch from './Launch';
 import Util from '../Utils';
