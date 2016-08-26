@@ -24,6 +24,8 @@
 
 @implementation ReactMyPageViewController
 
+@synthesize bridge = _bridge;
+
 //导出一个模块名供javascript引用
 
 RCT_EXPORT_MODULE(ReactPage);
@@ -61,7 +63,7 @@ RCT_EXPORT_METHOD(backToNative:(NSString *)name location:(NSString *)location da
 //对外提供调用方法,并执行callback
 RCT_EXPORT_METHOD(eventsCallback:(RCTResponseSenderBlock)callback){
     NSArray *arr = @[@"oc",@"swift",@"react"];
-    callback(@[[NSNull null],events]);
+    callback(@[[NSNull null],arr]);
 }
 //对外提供调用方法,支持Promise
 RCT_REMAP_METHOD(eventsPromise,

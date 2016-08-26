@@ -35,6 +35,8 @@ const styles = StyleSheet.create({
     },
     textInputStyle:{
         height:40,
+        paddingLeft:10,
+        color:Utils.selectedColor,
         borderColor:Utils.selectedColor,
         borderWidth: Utils.pixel
     },
@@ -97,10 +99,7 @@ class AddBillView extends Component{
         navigator.pop();
     }
     _generateHeader(){
-        const leftButton = (<CustomButton text='BACK' leftIcon={<Icon name="ios-arrow-back" size={20} color="#fff"/>} onPress={()=>this._back()}/>);
-        const rightButton = <CustomButton text='保存' rightIcon={<Icon name="ios-paper-plane" size={20} color="#fff"/>} onPress={()=>this._saveBill()}/>;
-        const customHeader = (<Header title={this.props.title} leftButton={leftButton} rightButton={rightButton}/>);
-        return customHeader;
+       return <Text>header</Text>;
     }
     render(){
         return (

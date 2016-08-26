@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import {
     NativeModules,
-    NativeAppEventEmiter
+    NativeAppEventEmitter
 } from 'react-native';
 import {connect} from 'react-redux';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -65,7 +65,7 @@ class NotifyView extends Component{
     }
     componentDidMount(){
         console.log("subscription");
-        subscription = NativeAppEventEmiter.addListener('notifyEmiter',(notify)=>console.log(notify));
+        subscription = NativeAppEventEmitter.addListener('notifyEmiter',(notify)=>console.log(notify));
     }
     componentWillUnmount(){
         subscription.remove();
@@ -74,7 +74,8 @@ class NotifyView extends Component{
     async _updateEvents(){
         try{
             var events = await ReactPage.eventsPromise();
-            this.setState({events});
+            console.log(events);
+            //this.setState({events});
         }catch(e){
             console.error(e);
         }
@@ -89,7 +90,8 @@ class NotifyView extends Component{
                             if(error){
                             console.error(error);
                             }else{
-                            this.setState({events:events,});
+                            console.log(events);
+                            //this.setState({events:events,});
                             }
                         }
                     )}

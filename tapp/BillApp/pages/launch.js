@@ -47,6 +47,7 @@ class Launch extends Component{
         InteractionManager.runAfterInteractions(() => {
             navigator.resetTo({
                 title:'bill-list',
+                animate:'FloatFromBottom',
                 Component: MainPage
             });
         });

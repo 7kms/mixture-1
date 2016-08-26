@@ -5,7 +5,8 @@ import {
     StyleSheet,
     NativeModules,
     ListView,
-    TouchableHighlight
+    TouchableHighlight,
+    Modal
 } from 'react-native';
 import actionCreates from '../Actions';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -84,6 +85,7 @@ class BillList extends Component{
         let {navigator} = this.props;
         navigator.push({
             title:'添加账单',
+            animate:'FloatFromBottom',
             Component: AddBill
         });
     }
